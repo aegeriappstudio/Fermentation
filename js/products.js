@@ -23,7 +23,7 @@ window.DEFAULT_PRODUCTS = [
       { name: "Bio-Ingwer, gehackt (mit Schale)", amount: "48 g" },
       { name: "Zucker (weiss, ungebleicht), 1:1 zum Ingwer", amount: "48 g" },
       { name: "Stilles Wasser, chlorfrei", amount: "ca. 480–500 ml" },
-      { name: "Glas, luftig mit Tuch abgedeckt", amount: "" }
+      { name: "Glas, luftig mit Tuch abgedeckt", amount: "1 l" }
     ],
     hint:
       "Täglich je 1 TL Ingwer + 1 TL Zucker nachfüttern und umrühren, bis er zuverlässig sprudelt. Kein Metalldeckel, kein Metalllöffel.",
