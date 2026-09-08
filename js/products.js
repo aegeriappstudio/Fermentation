@@ -60,28 +60,54 @@ window.DEFAULT_PRODUCTS = [
     ]
   },
   {
-    id: "kombucha",
-    name: "Kombucha",
-    type: "2 Gläser · F1",
+    id: "kombucha-glas-1",
+    name: "Kombucha Glas 1",
+    type: "3 Liter · Haupt-SCOBY · F1",
     color: "#b0642f",
     start: "2026-09-03",
     description:
-      "Gesüsster Tee mit SCOBY, zu einem spritzigen Getränk fermentiert. Zwei Gläser laufen parallel für Primärfermentation (F1); danach Abfüllen und optionale Flaschengärung (F2) für Kohlensäure und Aroma.",
-    ingredientsTitle: "Was ist drin (pro Glas)",
+      "Gesüsster Tee mit SCOBY, zu einem spritzigen Getränk fermentiert. Grosses 3-Liter-Glas mit dem Haupt-SCOBY. Weil der SCOBY geschwächt war und das Volumen grösser ist, dauert die Primärfermentation (F1) länger: 10–14 Tage, evtl. auch bis zu 3 Wochen, bis sich eine spürbare Säure und eine neue Haut zeigen. Danach Abfüllen und optionale Flaschengärung (F2) für Kohlensäure und Aroma.",
+    ingredientsTitle: "Was ist drin (Grundrezept pro Liter)",
     ingredients: [
       { name: "Schwarz- oder Grüntee, gezogen", amount: "1 l" },
       { name: "Zucker", amount: "70 g" },
-      { name: "SCOBY", amount: "1 Stück" },
-      { name: "Ansatzflüssigkeit (fertiger Kombucha)", amount: "100 ml" }
+      { name: "SCOBY (Hauptkultur, geschwächt)", amount: "1 Stück" },
+      { name: "Ansatzflüssigkeit (fertiger Kombucha)", amount: "100 ml" },
+      { name: "Glas", amount: "3 l" }
     ],
     hint:
-      "Abdeckung mit Tuch + Gummiband, dunkel und warm (23–27 °C). Immer mit Strohhalm probieren, nie direkt aus dem Glas trinken.",
+      "Abdeckung mit Tuch + Gummiband, dunkel und warm (23–27 °C). Immer mit sauberem Löffel oder Röhrchen probieren, nie direkt aus dem Glas trinken.",
     steps: [
-      { from: 0, to: 0, title: "Ansetzen (F1)", text: "Gesüssten Tee + SCOBY + Ansatzflüssigkeit in beide Gläser." },
-      { from: 5, to: 7, title: "Erste Geschmacksprobe", text: "Ab Tag 5 mit Strohhalm probieren." },
-      { from: 7, to: 12, title: "Alle 1–2 Tage testen", text: "Bis Süsse/Säure ausgewogen ist." },
-      { from: 10, to: 14, title: "F1 abschliessen", text: "SCOBY + 100 ml Ansatzflüssigkeit für den nächsten Batch zurückbehalten, Rest abfüllen." },
-      { from: 12, to: 17, label: "+2–3 Tage", title: "F2 – Flaschengärung", text: "Abgefüllt mit Frucht/Ingwer, luftdicht, Raumtemperatur zur Karbonisierung, danach kühlen." }
+      { from: 0, to: 0, title: "Ansetzen (F1)", text: "Gesüssten Tee + SCOBY + Ansatzflüssigkeit ins 3-Liter-Glas." },
+      { from: 6, to: null, title: "Gelegentlich probieren", text: "Ab Tag 7 mit sauberem Löffel oder Röhrchen kosten, um den Fortschritt zu checken." },
+      { from: 9, to: 13, title: "Säure & neue Haut erwartet", text: "Nach 10–14 Tagen sollten spürbare Säure und eine neue Haut da sein. Weiter probieren, bis Süsse/Säure ausgewogen ist." },
+      { from: 14, to: 20, title: "Geduld bis 3 Wochen", text: "Falls noch zu süss oder ohne neue Haut: weiterlaufen lassen und alle 1–2 Tage probieren." },
+      { from: 13, to: 20, label: "sobald ausgewogen", title: "F1 abschliessen", text: "SCOBY + 100 ml Ansatzflüssigkeit für den nächsten Batch zurückbehalten, Rest abfüllen." },
+      { from: 15, to: 23, label: "+2–3 Tage", title: "F2 – Flaschengärung", text: "Abgefüllt mit Frucht/Ingwer, luftdicht, Raumtemperatur zur Karbonisierung, danach kühlen." }
+    ]
+  },
+  {
+    id: "kombucha-glas-2",
+    name: "Kombucha Glas 2",
+    type: "1 Liter · Reserve ohne festen SCOBY",
+    color: "#c98a4b",
+    start: "2026-09-03",
+    description:
+      "Reserveglas (1 Liter) ohne festen SCOBY: Der neue SCOBY bildet sich «from scratch» aus der Starterflüssigkeit. Das dauert typischerweise 2–4 Wochen, bis eine sichtbare, geschlossene Haut an der Oberfläche entstanden ist. Anfangs sind evtl. nur einzelne dünne, durchsichtige Flecken zu sehen – das ist der Anfang der neuen Kultur.",
+    ingredientsTitle: "Was ist drin",
+    ingredients: [
+      { name: "Schwarz- oder Grüntee, gezogen", amount: "1 l" },
+      { name: "Zucker", amount: "70 g" },
+      { name: "Ansatzflüssigkeit (fertiger Kombucha)", amount: "100 ml" },
+      { name: "Glas, kein fester SCOBY", amount: "1 l" }
+    ],
+    hint:
+      "Abdeckung mit Tuch + Gummiband, dunkel und warm (23–27 °C). Ruhig stehen lassen und möglichst nicht bewegen, damit sich die Haut ungestört bilden kann.",
+    steps: [
+      { from: 0, to: 0, title: "Ansetzen (nur Starterflüssigkeit)", text: "Gesüssten Tee + Ansatzflüssigkeit ins 1-Liter-Glas, ohne festen SCOBY." },
+      { from: 4, to: null, title: "Erste Flecken beobachten", text: "Einzelne dünne, durchsichtige Flecken an der Oberfläche sind der Anfang der neuen Kultur. Nicht umrühren." },
+      { from: 14, to: 27, title: "Geschlossene Haut erwartet", text: "Nach 2–4 Wochen sollte eine sichtbare, geschlossene Haut entstanden sein. Sichtkontrolle alle paar Tage." },
+      { from: 28, to: null, title: "Neuer SCOBY einsatzbereit", text: "Geschlossene Haut = fertige Kultur; als Reserve behalten oder für den nächsten Batch verwenden." }
     ]
   }
 ];
