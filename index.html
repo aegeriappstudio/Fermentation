@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fermentations-Logbuch</title>
+  <meta name="description" content="Logbuch für laufende Fermentations-Ansätze: Zutaten, Fahrplan ab Start und was heute ansteht.">
+  <meta name="theme-color" content="#f6f1e7">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🫙%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="header-row">
+        <div>
+          <h1>Fermentations-Logbuch</h1>
+          <p class="today">Heute · <span id="today-label"></span></p>
+        </div>
+        <div class="header-actions">
+          <button type="button" class="btn btn-primary" id="btn-new">+ Neues Produkt</button>
+        </div>
+      </div>
+      <p class="intro" id="intro"></p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="section" id="todo-section" aria-labelledby="todo-title">
+      <h2 id="todo-title">Heute zu tun</h2>
+      <div id="todo-list" class="todo-list"></div>
+    </section>
+
+    <section class="section" aria-labelledby="overview-title">
+      <h2 id="overview-title">Übersicht</h2>
+      <div id="overview" class="overview-grid"></div>
+    </section>
+
+    <section class="section" aria-labelledby="products-title">
+      <h2 id="products-title" class="visually-hidden">Ansätze im Detail</h2>
+      <div id="products" class="products"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Häkchen, Notizen und selbst angelegte Produkte werden nur in diesem Browser gespeichert.</p>
+      <div class="footer-actions">
+        <button type="button" class="btn btn-ghost" id="btn-export">Backup exportieren</button>
+        <button type="button" class="btn btn-ghost" id="btn-import">Backup importieren</button>
+        <button type="button" class="btn btn-ghost" id="btn-reset">Standard-Produkte wiederherstellen</button>
+        <input type="file" id="import-file" accept="application/json,.json" hidden>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dialog: Produkt anlegen / bearbeiten -->
+  <dialog id="product-dialog" class="dialog">
+    <form id="product-form" method="dialog" novalidate>
+      <div class="dialog-head">
+        <h2 id="dialog-title">Neues Produkt anlegen</h2>
+        <button type="button" class="btn-icon" id="btn-close" aria-label="Schliessen">×</button>
+      </div>
+
+      <div class="dialog-body">
+        <div class="grid-2">
+          <label class="field">
+            <span>Name *</span>
+            <input type="text" name="name" required placeholder="z. B. Sauerkraut">
+          </label>
+          <label class="field">
+            <span>Art / Untertitel</span>
+            <input type="text" name="type" placeholder="z. B. Milchsäure-Ferment">
+          </label>
+          <label class="field">
+            <span>Startdatum *</span>
+            <input type="date" name="start" required>
+          </label>
+          <label class="field">
+            <span>Überschrift Zutaten</span>
+            <input type="text" name="ingredientsTitle" placeholder="Was ist drin">
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Beschreibung</span>
+          <textarea name="description" rows="3" placeholder="Worum geht es bei diesem Ansatz?"></textarea>
+        </label>
+
+        <fieldset class="fieldset">
+          <legend>Was ist drin</legend>
+          <div id="ingredient-rows" class="rows"></div>
+          <button type="button" class="btn btn-ghost btn-sm" id="btn-add-ingredient">+ Zutat</button>
+        </fieldset>
+
+        <label class="field">
+          <span>Hinweis / Pflege</span>
+          <textarea name="hint" rows="2" placeholder="z. B. Täglich umrühren, kein Metall verwenden."></textarea>
+        </label>
+
+        <fieldset class="fieldset">
+          <legend>Fahrplan</legend>
+          <p class="help">Tage zählen ab Start: Tag 1 = Starttag. «Bis» leer lassen für einen offenen Schritt («ab …»). Die Anzeige wird automatisch als Datum berechnet; alternativ kann ein eigener Text (z. B. «+2–3 Tage») angegeben werden.</p>
+          <div id="step-rows" class="rows"></div>
+          <button type="button" class="btn btn-ghost btn-sm" id="btn-add-step">+ Schritt</button>
+        </fieldset>
+      </div>
+
+      <div class="dialog-foot">
+        <p class="form-error" id="form-error" hidden></p>
+        <button type="button" class="btn btn-ghost" id="btn-cancel">Abbrechen</button>
+        <button type="submit" class="btn btn-primary" id="btn-save">Speichern</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Vorlagen -->
+  <template id="tpl-ingredient-row">
+    <div class="row">
+      <input type="text" class="ing-name" placeholder="Zutat" aria-label="Zutat">
+      <input type="text" class="ing-amount" placeholder="Menge" aria-label="Menge">
+      <button type="button" class="btn-icon row-remove" aria-label="Zeile entfernen">×</button>
+    </div>
+  </template>
+
+  <template id="tpl-step-row">
+    <div class="row row-step">
+      <input type="number" class="step-from" min="1" step="1" placeholder="Tag von" aria-label="Tag von">
+      <input type="number" class="step-to" min="1" step="1" placeholder="bis" aria-label="Tag bis (leer = offen)">
+      <input type="text" class="step-label" placeholder="Anzeige (optional)" aria-label="Eigene Anzeige">
+      <input type="text" class="step-title" placeholder="Titel *" aria-label="Titel">
+      <input type="text" class="step-text" placeholder="Was ist zu tun?" aria-label="Beschreibung">
+      <button type="button" class="btn-icon row-remove" aria-label="Zeile entfernen">×</button>
+    </div>
+  </template>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
