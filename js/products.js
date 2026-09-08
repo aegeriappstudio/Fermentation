@@ -38,22 +38,22 @@ window.DEFAULT_PRODUCTS = [
   {
     id: "basilikum",
     name: "Basilikum",
-    type: "Milchsäure-Ferment",
+    type: "Milchsäure-Ferment · 3 l",
     color: "#5d8a3c",
     start: "2026-09-06",
     description:
-      "Basilikumblätter in Salzlake, milchsauer fermentiert – ergibt ein würziges, haltbares Kraut zum Verfeinern von Saucen, Öl oder Pesto. Läuft bei Raumtemperatur an, reift danach im Kühlschrank nach.",
+      "Basilikumblätter in Salzlake, milchsauer fermentiert – ergibt ein würziges, haltbares Kraut zum Verfeinern von Saucen, Öl oder Pesto. Angesetzt im 3-Liter-Glas mit rund 2,5 l Lake (25 g Salz pro Liter, 2,5 %). Läuft bei Raumtemperatur an, reift danach im Kühlschrank nach.",
     ingredientsTitle: "Was ist drin",
     ingredients: [
-      { name: "Frische Basilikumblätter, gewaschen", amount: "ca. 1 Bund" },
-      { name: "Wasser, ungechlort", amount: "500 ml" },
-      { name: "Salz (unjodiert), 2 % der Wassermenge", amount: "10 g" },
-      { name: "Glas mit Gärgewicht, blattfrei unter der Lake", amount: "0.5–0.7 l" }
+      { name: "Frische Basilikumblätter, gewaschen", amount: "281 g" },
+      { name: "Wasser, ungechlort", amount: "ca. 2.5 l" },
+      { name: "Salz (unjodiert), 25 g pro Liter (2,5 %)", amount: "ca. 63 g" },
+      { name: "Glas mit Gärgewicht, blattfrei unter der Lake", amount: "3 l" }
     ],
     hint:
       "Alle 1–2 Tage kurz lüften (\"Burping\"). Blätter müssen komplett unter der Lake bleiben, sonst Schimmelgefahr.",
     steps: [
-      { from: 0, to: 0, title: "Ansetzen", text: "Blätter mit 2 %-Salzlake ansetzen, Gärgewicht drauf." },
+      { from: 0, to: 0, title: "Ansetzen", text: "281 g Blätter mit 2,5 %-Salzlake (25 g/l, ca. 2,5 l) ansetzen, Gärgewicht drauf." },
       { from: 2, to: 3, title: "Erste Kontrolle", text: "Bläschen und leicht säuerlicher Geruch sind normal." },
       { from: 6, to: null, title: "Geschmackstest", text: "Ab Tag 7 probieren, je nach gewünschter Säure weiterlaufen lassen." },
       { from: 10, to: 14, title: "Fertig → Kühlschrank", text: "In den Kühlschrank umziehen; hält dort mehrere Monate." }
