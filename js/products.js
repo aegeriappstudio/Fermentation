@@ -17,18 +17,18 @@ window.DEFAULT_PRODUCTS = [
     color: "#d99a2b",
     start: "2026-09-08",
     description:
-      "Ein wilder Hefe-/Bakterien-Starter aus Ingwer, Zucker und Wasser – die Basis für selbst fermentierte Limonaden (z. B. Ginger Beer). Läuft bei Raumtemperatur an und wird danach im Kühlschrank als Dauerkultur weitergeführt.",
+      "Ein wilder Hefe-/Bakterien-Starter aus Ingwer, Zucker und Wasser – die Basis für selbst fermentierte Limonaden (z. B. Ginger Beer). Angesetzt mit 48 g Ingwer, Zucker 1:1 zum Ingwer und ca. 480–500 ml Wasser. Läuft bei Raumtemperatur an und wird danach im Kühlschrank als Dauerkultur weitergeführt.",
     ingredientsTitle: "Was ist drin",
     ingredients: [
-      { name: "Bio-Ingwer, grob gerieben (mit Schale)", amount: "1 EL" },
-      { name: "Zucker (weiss, ungebleicht)", amount: "1 EL" },
-      { name: "Stilles Wasser, chlorfrei", amount: "250 ml" },
-      { name: "Glas, luftig mit Tuch abgedeckt", amount: "0.5 l" }
+      { name: "Bio-Ingwer, gehackt (mit Schale)", amount: "48 g" },
+      { name: "Zucker (weiss, ungebleicht), 1:1 zum Ingwer", amount: "48 g" },
+      { name: "Stilles Wasser, chlorfrei", amount: "ca. 480–500 ml" },
+      { name: "Glas, luftig mit Tuch abgedeckt", amount: "" }
     ],
     hint:
       "Täglich je 1 TL Ingwer + 1 TL Zucker nachfüttern und umrühren, bis er zuverlässig sprudelt. Kein Metalldeckel, kein Metalllöffel.",
     steps: [
-      { from: 0, to: 0, title: "Ansetzen", text: "1 EL Ingwer + 1 EL Zucker + 250 ml Wasser ansetzen." },
+      { from: 0, to: 0, title: "Ansetzen", text: "48 g Ingwer + 48 g Zucker + ca. 480–500 ml Wasser ansetzen, umrühren." },
       { from: 1, to: 5, title: "Täglich füttern", text: "Je 1 TL Ingwer + 1 TL Zucker zugeben, umrühren." },
       { from: 4, to: null, title: "Aktivitäts-Check", text: "Bläschenbildung prüfen; ohne Aktivität weiter füttern." },
       { from: 6, to: 9, title: "Einsatzbereit", text: "Sprudelt zuverlässig – als Starter für Limonade nutzbar." },
