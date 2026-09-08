@@ -4,6 +4,7 @@
  *   from / to = Tages-Offset ab Start (0 = Starttag, 1 = Tag danach, ...)
  *   to = null  → offener Schritt ("ab dd.mm.")
  *   label      → optionale feste Anzeige statt berechnetem Datum (z. B. "+2–3 Tage")
+ * color = Farbe der Flüssigkeit im Glas (Hex), optional.
  *
  * Neue Produkte, die auf der Seite angelegt werden, landen im Browser-Speicher.
  * Damit sie für alle Besucher sichtbar sind, hier eintragen (siehe README).
@@ -13,6 +14,7 @@ window.DEFAULT_PRODUCTS = [
     id: "ginger-bug",
     name: "Ginger Bug",
     type: "Wildhefe-Starter",
+    color: "#d99a2b",
     start: "2026-09-08",
     description:
       "Ein wilder Hefe-/Bakterien-Starter aus Ingwer, Zucker und Wasser – die Basis für selbst fermentierte Limonaden (z. B. Ginger Beer). Läuft bei Raumtemperatur an und wird danach im Kühlschrank als Dauerkultur weitergeführt.",
@@ -37,6 +39,7 @@ window.DEFAULT_PRODUCTS = [
     id: "basilikum",
     name: "Basilikum",
     type: "Milchsäure-Ferment",
+    color: "#5d8a3c",
     start: "2026-09-06",
     description:
       "Basilikumblätter in Salzlake, milchsauer fermentiert – ergibt ein würziges, haltbares Kraut zum Verfeinern von Saucen, Öl oder Pesto. Läuft bei Raumtemperatur an, reift danach im Kühlschrank nach.",
@@ -60,6 +63,7 @@ window.DEFAULT_PRODUCTS = [
     id: "kombucha",
     name: "Kombucha",
     type: "2 Gläser · F1",
+    color: "#b0642f",
     start: "2026-09-03",
     description:
       "Gesüsster Tee mit SCOBY, zu einem spritzigen Getränk fermentiert. Zwei Gläser laufen parallel für Primärfermentation (F1); danach Abfüllen und optionale Flaschengärung (F2) für Kohlensäure und Aroma.",

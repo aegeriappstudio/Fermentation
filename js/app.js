@@ -5,6 +5,16 @@
   const STORAGE_KEY = "fermentations-logbuch.v1";
   const WEEKDAYS = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
   const DAY_MS = 24 * 60 * 60 * 1000;
+  const PALETTE = [
+    { color: "#d99a2b", name: "Ingwer" },
+    { color: "#5d8a3c", name: "Basilikum" },
+    { color: "#b0642f", name: "Tee" },
+    { color: "#c8452b", name: "Kimchi" },
+    { color: "#8a3f6b", name: "Rotkraut" },
+    { color: "#c9b36a", name: "Sauerkraut" },
+    { color: "#e0c04a", name: "Honig" },
+    { color: "#7fa7b5", name: "Wasserkefir" }
+  ];
 
   /* ---------- Speicher ---------- */
 
@@ -142,6 +152,48 @@
     return { start, offset, day: offset + 1, active, next };
   }
 
+  function productColor(p) {
+    if (p.color) return p.color;
+    let h = 0;
+    for (const ch of String(p.id)) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+    return PALETTE[h % PALETTE.length].color;
+  }
+
+  // Fortschritt 0..1 über den gesamten Fahrplan (letzter fester Schritt = voll).
+  function productProgress(p, st) {
+    const steps = p.steps || [];
+    let end = 0;
+    steps.forEach((s, i) => {
+      const r = stepRange(p, i);
+      end = Math.max(end, Number.isFinite(r.to) ? r.to : r.from + 2);
+    });
+    if (st.offset < 0) return 0;
+    return Math.max(0.12, Math.min(1, (st.offset + 1) / (end + 1)));
+  }
+
+  function jarSVG(p, progress) {
+    const color = productColor(p);
+    const uid = `jar-${p.id}`;
+    const top = 42, bottom = 146, h = bottom - top;
+    const level = bottom - h * progress;
+    const bubbles = [34, 46, 58, 70, 82].map((x, i) =>
+      `<circle class="bubble" cx="${x}" cy="${bottom}" r="${2 + (i % 3)}" style="animation-delay:${(i * 0.9).toFixed(1)}s;animation-duration:${(3.2 + (i % 4) * 0.7).toFixed(1)}s"/>`
+    ).join("");
+    return `<svg class="jar" viewBox="0 0 120 156" role="img" aria-label="Füllstand ${Math.round(progress * 100)} %">
+      <defs><clipPath id="${uid}"><path d="M24 40 h72 v96 a10 10 0 0 1 -10 10 h-52 a10 10 0 0 1 -10 -10 z"/></clipPath></defs>
+      <rect x="30" y="6" width="60" height="16" rx="5" class="jar-lid"/>
+      <rect x="24" y="20" width="72" height="12" rx="4" class="jar-ring"/>
+      <path d="M22 32 h76 v104 a12 12 0 0 1 -12 12 h-52 a12 12 0 0 1 -12 -12 z" class="jar-glass"/>
+      <g clip-path="url(#${uid})">
+        <rect x="20" y="${level.toFixed(1)}" width="80" height="${(bottom - level + 4).toFixed(1)}" fill="${color}" class="jar-liquid"/>
+        <path d="M20 ${level.toFixed(1)} q10 -4 20 0 t20 0 t20 0 t20 0 v6 h-80 z" fill="${color}" opacity=".7"/>
+        <g fill="rgba(255,255,255,.55)" style="--level:${(level - bottom).toFixed(1)}px">${bubbles}</g>
+      </g>
+      <path d="M30 44 v80" class="jar-gloss"/>
+      <path d="M22 32 h76 v104 a12 12 0 0 1 -12 12 h-52 a12 12 0 0 1 -12 -12 z" class="jar-outline"/>
+    </svg>`;
+  }
+
   /* ---------- Rendering ---------- */
 
   const $ = (sel, root) => (root || document).querySelector(sel);
@@ -208,7 +260,7 @@
         const done = !!state.dayDone[key];
         const cb = el("input", { type: "checkbox", id: `todo-${key}`, "aria-label": `${p.name}: ${s.title} heute erledigt` });
         cb.checked = done;
-        const item = el("label", { class: "todo-item" + (done ? " is-done" : ""), for: `todo-${key}` }, [
+        const item = el("label", { class: "todo-item" + (done ? " is-done" : ""), for: `todo-${key}`, style: `--jar:${productColor(p)}` }, [
           cb,
           el("div", null, [
             el("div", { class: "todo-product", text: `${p.name} · Tag ${st.day}` }),
@@ -240,16 +292,19 @@
       const st = productStatus(p);
       const current = st.active.length ? p.steps[st.active[0]] : null;
       const next = st.next !== null ? p.steps[st.next] : null;
-      const card = el("a", { class: "ov-card", href: `#p-${p.id}` }, [
-        el("h3", { text: p.name }),
-        el("div", null, [
-          st.offset < 0
-            ? el("span", { class: "ov-day", text: `Start in ${-st.offset} Tg.` })
-            : el("span", { class: "ov-day", text: `Tag ${st.day}` }),
-          el("span", { class: "ov-since", text: `seit ${fmtShort(st.start)}` })
-        ]),
-        el("div", { class: "ov-current", text: current ? current.title : (next ? "Warten" : "Abgeschlossen") }),
-        el("div", { class: "ov-next", text: next ? `nächster Schritt: ${stepLabel(p, next)} – ${next.title}` : "kein weiterer Schritt" })
+      const card = el("a", { class: "ov-card", href: `#p-${p.id}`, style: `--jar:${productColor(p)}` }, [
+        el("div", { class: "ov-jar", html: jarSVG(p, productProgress(p, st)) }),
+        el("div", { class: "ov-body" }, [
+          el("h3", { text: p.name }),
+          el("div", { class: "ov-dayline" }, [
+            st.offset < 0
+              ? el("span", { class: "ov-day", text: `Start in ${-st.offset} Tg.` })
+              : el("span", { class: "ov-day", text: `Tag ${st.day}` }),
+            el("span", { class: "ov-since", text: `seit ${fmtShort(st.start)}` })
+          ]),
+          el("div", { class: "ov-current", text: current ? current.title : (next ? "Warten" : "Abgeschlossen") }),
+          el("div", { class: "ov-next", text: next ? `nächster Schritt: ${stepLabel(p, next)} – ${next.title}` : "kein weiterer Schritt" })
+        ])
       ]);
       grid.append(card);
     });
@@ -336,7 +391,7 @@
       el("div", { class: "notes" }, [el("h4", { text: "Notizen" }), notesArea, notesStatus])
     ]);
 
-    return el("article", { class: "product", id: `p-${p.id}` }, [
+    return el("article", { class: "product", id: `p-${p.id}`, style: `--jar:${productColor(p)}` }, [
       head,
       p.description ? el("p", { class: "product-desc", text: p.description }) : null,
       el("div", { class: "product-cols" }, [ingredients, plan])
@@ -426,9 +481,20 @@
     return row;
   }
 
+  function renderSwatches(selected) {
+    const box = $("#swatches");
+    box.replaceChildren();
+    PALETTE.forEach((c, i) => {
+      const input = el("input", { type: "radio", name: "color", value: c.color, id: `sw-${i}` });
+      input.checked = c.color === selected;
+      box.append(el("label", { class: "swatch", style: `--sw:${c.color}`, title: c.name }, [input, el("span")]));
+    });
+  }
+
   function openDialog(product) {
     editingId = product ? product.id : null;
     form.reset();
+    renderSwatches(product ? productColor(product) : PALETTE[0].color);
     $("#form-error").hidden = true;
     $("#ingredient-rows").replaceChildren();
     $("#step-rows").replaceChildren();
@@ -496,6 +562,7 @@
       start: form.start.value,
       description: form.description.value.trim(),
       ingredientsTitle: form.ingredientsTitle.value.trim() || "Was ist drin",
+      color: (form.querySelector('input[name="color"]:checked') || {}).value || PALETTE[0].color,
       ingredients,
       hint: form.hint.value.trim(),
       steps

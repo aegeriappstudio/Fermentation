@@ -5,17 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fermentations-Logbuch</title>
   <meta name="description" content="Logbuch für laufende Fermentations-Ansätze: Zutaten, Fahrplan ab Start und was heute ansteht.">
-  <meta name="theme-color" content="#f6f1e7">
+  <meta name="theme-color" content="#23472c">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🫙%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
+    <div class="bubbles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
     <div class="wrap">
       <div class="header-row">
         <div>
-          <h1>Fermentations-Logbuch</h1>
-          <p class="today">Heute · <span id="today-label"></span></p>
+          <p class="kicker">Ansetzen · Füttern · Probieren</p>
+          <h1>Fermentations-<br>Logbuch</h1>
+          <p class="today"><span class="today-tag">Heute</span> <span id="today-label"></span></p>
         </div>
         <div class="header-actions">
           <button type="button" class="btn btn-primary" id="btn-new">+ Neues Produkt</button>
@@ -27,12 +35,12 @@
 
   <main class="wrap">
     <section class="section" id="todo-section" aria-labelledby="todo-title">
-      <h2 id="todo-title">Heute zu tun</h2>
+      <h2 id="todo-title"><span class="h-mark">☑</span> Heute zu tun</h2>
       <div id="todo-list" class="todo-list"></div>
     </section>
 
     <section class="section" aria-labelledby="overview-title">
-      <h2 id="overview-title">Übersicht</h2>
+      <h2 id="overview-title"><span class="h-mark">🫙</span> Im Regal</h2>
       <div id="overview" class="overview-grid"></div>
     </section>
 
@@ -80,6 +88,11 @@
             <span>Überschrift Zutaten</span>
             <input type="text" name="ingredientsTitle" placeholder="Was ist drin">
           </label>
+        </div>
+
+        <div class="field">
+          <span>Farbe (Glas)</span>
+          <div class="swatches" id="swatches"></div>
         </div>
 
         <label class="field">
