@@ -10,11 +10,11 @@ Reine statische Seite (HTML/CSS/JS), kein Build-Schritt nötig.
 - **Heute zu tun**: alle Schritte, die am heutigen Tag anstehen, pro Ansatz mit Häkchen.
 - **Übersicht**: Tag N seit Start, aktueller und nächster Schritt je Ansatz.
 - **Detailkarten**: Beschreibung, «Was ist drin», Pflegehinweis, Fahrplan mit
-  berechneten Daten (z. B. «09.–13.09.», «ab 12.09.») und «heute»-Markierung, Notizen.
+  berechneten Daten (z. B. «09.–13.09.», «ab 12.09.») und «heute»-Markierung.
 - **Neues Produkt anlegen / bearbeiten / löschen** direkt auf der Seite.
 - **Backup exportieren / importieren** (JSON), um Daten in einen anderen Browser mitzunehmen.
 
-Häkchen, Notizen und selbst angelegte Produkte werden im `localStorage` des Browsers
+Häkchen und selbst angelegte Produkte werden im `localStorage` des Browsers
 gespeichert. Sie sind also nur in diesem Browser sichtbar.
 
 ## Veröffentlichen auf GitHub Pages

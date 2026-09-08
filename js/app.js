@@ -23,8 +23,7 @@
     overrides: {},        // bearbeitete Standard-Produkte (id → Produkt)
     hidden: [],           // gelöschte Standard-Produkte (ids)
     stepDone: {},         // "pid|stepIdx" → true
-    dayDone: {},          // "pid|stepIdx|YYYY-MM-DD" → true
-    notes: {}             // pid → Text
+    dayDone: {}           // "pid|stepIdx|YYYY-MM-DD" → true
   });
 
   let state = loadState();
@@ -223,7 +222,7 @@
 
     $("#today-label").textContent = fmtToday(t);
     $("#intro").textContent = products.length
-      ? `Übersicht über die laufenden Ansätze: ${joinNames(products.map((p) => p.name))} – mit Zutaten, Fahrplan ab Start und was als Nächstes ansteht. Häkchen und Notizen bleiben in diesem Browser gespeichert.`
+      ? `Übersicht über die laufenden Ansätze: ${joinNames(products.map((p) => p.name))} – mit Zutaten, Fahrplan ab Start und was als Nächstes ansteht. Häkchen bleiben in diesem Browser gespeichert.`
       : "Noch keine Ansätze angelegt. Mit «Neues Produkt» startet der erste Fahrplan.";
 
     renderTodo(products, t);
@@ -371,24 +370,9 @@
       return li;
     }));
 
-    const notesArea = el("textarea", { placeholder: "Beobachtungen, Geruch, Geschmack, Temperatur …", "aria-label": `Notizen zu ${p.name}` });
-    notesArea.value = state.notes[p.id] || "";
-    const notesStatus = el("div", { class: "notes-status" });
-    let timer = null;
-    notesArea.addEventListener("input", () => {
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-        if (notesArea.value.trim()) state.notes[p.id] = notesArea.value; else delete state.notes[p.id];
-        saveState();
-        notesStatus.textContent = "Gespeichert.";
-        setTimeout(() => { notesStatus.textContent = ""; }, 1500);
-      }, 400);
-    });
-
     const plan = el("div", null, [
       el("h4", { text: "Fahrplan" }),
-      timeline,
-      el("div", { class: "notes" }, [el("h4", { text: "Notizen" }), notesArea, notesStatus])
+      timeline
     ]);
 
     return el("article", { class: "product", id: `p-${p.id}`, style: `--jar:${productColor(p)}` }, [
@@ -413,7 +397,7 @@
   }
 
   function resetDefaults() {
-    if (!confirm("Alle Standard-Produkte auf den Originalzustand zurücksetzen? Selbst angelegte Produkte, Häkchen und Notizen bleiben erhalten.")) return;
+    if (!confirm("Alle Standard-Produkte auf den Originalzustand zurücksetzen? Selbst angelegte Produkte und Häkchen bleiben erhalten.")) return;
     state.hidden = [];
     state.overrides = {};
     saveState();
