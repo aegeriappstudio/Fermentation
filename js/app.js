@@ -13,7 +13,8 @@
     { color: "#8a3f6b", name: "Rotkraut" },
     { color: "#c9b36a", name: "Sauerkraut" },
     { color: "#e0c04a", name: "Honig" },
-    { color: "#7fa7b5", name: "Wasserkefir" }
+    { color: "#7fa7b5", name: "Wasserkefir" },
+    { color: "#9e3d5c", name: "Pflaume" }
   ];
 
   /* ---------- Speicher ---------- */

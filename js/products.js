@@ -109,5 +109,29 @@ window.DEFAULT_PRODUCTS = [
       { from: 14, to: 27, title: "Geschlossene Haut erwartet", text: "Nach 2–4 Wochen sollte eine sichtbare, geschlossene Haut entstanden sein. Sichtkontrolle alle paar Tage." },
       { from: 28, to: null, title: "Neuer SCOBY einsatzbereit", text: "Geschlossene Haut = fertige Kultur; als Reserve behalten oder für den nächsten Batch verwenden." }
     ]
+  },
+  {
+    id: "lakto-pflaumen",
+    name: "Lakto-Pflaumen",
+    type: "Vakuumbeutel · 2 % Meersalz",
+    color: "#9e3d5c",
+    start: "2026-09-10",
+    description:
+      "Milchsauer fermentierte Pflaumen nach Noma-Art, angesetzt am 10.09.2026 um 21:00 Uhr. Reife, noch feste Pflaumen halbiert, entsteint, mit 2 % Meersalz vermischt und flach im Vakuumbeutel versiegelt (Schnittfläche nach unten, oben Platz gelassen). Bei Raumtemperatur (21 °C) dauert es 6–7 Tage, bei 28 °C etwa 5 Tage. Ergebnis: weiche, angenehm säuerliche Pflaumen plus ca. 125 ml Saft – der Saft ist als Vinaigrette oder Ersatz für Sauce Mignonette (zu Austern) grossartig, das Fruchtfleisch lässt sich trocknen, die Schalen werden zu Chips oder Pulver.",
+    ingredientsTitle: "Was ist drin",
+    ingredients: [
+      { name: "Pflaumen, reif und noch fest, halbiert und entsteint", amount: "1 kg" },
+      { name: "Meersalz (unjodiert), 2 % des Fruchtgewichts", amount: "20 g" },
+      { name: "Vakuumbeutel, eine Schicht, Schnittfläche nach unten", amount: "1 Stück" }
+    ],
+    hint:
+      "Täglich kontrollieren und probieren. Bläht sich der Beutel wie ein Ballon: Ecke abschneiden («Rülpser»), Gas entweichen lassen, kosten, wieder vakuumieren – dabei keinen Saft absaugen. Leichtes Moussieren ist normal. Dünne weissliche Kahmhefe ist harmlos: vorsichtig mit dem Löffel abheben.",
+    steps: [
+      { from: 0, to: 0, title: "Ansetzen", text: "1 kg Pflaumen halbieren, Steine entfernen, 20 g Meersalz untermischen, in Reihen mit Schnittfläche nach unten in den Beutel, auf höchster Stufe vakuumieren." },
+      { from: 1, to: 4, title: "Täglich prüfen & probieren", text: "Beutel anschauen: prall wie ein Ballon → Rülpser machen, probieren, neu versiegeln. Die Süsse wandelt sich langsam in sanfte Säure." },
+      { from: 5, to: 7, title: "Fertig? Geschmack entscheidet", text: "Nach 5–7 Tagen (Tag 5 bei 28 °C, Tag 6–7 bei 21 °C) sollten die Pflaumen fertig sein: weich, angenehm säuerlich, noch mit Fruchtcharakter. Zu lange = nur noch penetrante Säure." },
+      { from: 5, to: 7, label: "sobald fertig", title: "Saft abgiessen & aufbewahren", text: "Saft durch ein Sieb giessen (ca. 125 ml) – im Kühlschrank bis 1 Woche haltbar, sonst luftdicht einfrieren. Pflaumen in ein Gefäss und in den Kühlschrank (bis 1 Woche) oder mit Schnittfläche nach unten einzeln anfrieren, dann vakuumieren und tiefkühlen." },
+      { from: 8, to: null, title: "Weiterverarbeiten (optional)", text: "Fruchtfleisch bei genau 40 °C trocknen (Konsistenz wie getrocknete Aprikosen). Schalen bei 40 °C im Dörrautomaten oder 60 °C im Ofen zu Chips trocknen, oder in der Gewürzmühle zu Pflaumenschalenpulver mahlen." }
+    ]
   }
 ];
