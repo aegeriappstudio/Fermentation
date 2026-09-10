@@ -157,5 +157,29 @@ window.DEFAULT_PRODUCTS = [
       { from: 5, to: 7, label: "sobald fertig", title: "Saft abgiessen & aufbewahren", text: "Saft durch ein Sieb giessen (ca. 125 ml) – im Kühlschrank bis 1 Woche haltbar, sonst luftdicht einfrieren. Pflaumen in ein Gefäss und in den Kühlschrank (bis 1 Woche) oder mit Schnittfläche nach unten einzeln anfrieren, dann vakuumieren und tiefkühlen." },
       { from: 8, to: null, title: "Weiterverarbeiten (optional)", text: "Fruchtfleisch bei genau 40 °C trocknen (Konsistenz wie getrocknete Aprikosen). Schalen bei 40 °C im Dörrautomaten oder 60 °C im Ofen zu Chips trocknen, oder in der Gewürzmühle zu Pflaumenschalenpulver mahlen." }
     ]
+  },
+  {
+    id: "lakto-blaubeeren",
+    name: "Lakto-Blaubeeren",
+    type: "4 Bügelgläser · 2 % Salz",
+    color: "#4a3f8f",
+    start: "2026-09-10",
+    description:
+      "Milchsauer fermentierte Blaubeeren nach Noma-Art, angesetzt am 10.09.2026 um 22:00 Uhr in vier Bügelgläsern. Beeren nur kurz abgespült, mit 2 % Salz vermischt und ins Glas gefüllt. Bei 28 °C dauert es 4–5 Tage, bei Zimmertemperatur ein paar Tage länger – fertig sind sie, wenn sie leicht gesäuert sind, aber noch ihr süsses, fruchtiges Aroma haben. Verwendung: ein Löffel auf Naturjoghurt mit Honig zum Frühstück, im Müsli oder Smoothie, mit dem Saft püriert als salzig-süsse Fruchtsauce für Eis oder jungen Käse, oder püriert und passiert als Würzpaste für Maiskolben, Rote Bete, Spareribs und Grillsauce (statt Tomatenmark/Ketchup).",
+    ingredientsTitle: "Was ist drin (alle 4 Gläser)",
+    ingredients: [
+      { name: "Blaubeeren, kurz abgespült", amount: "1250 g" },
+      { name: "Salz (unjodiert), 2 % des Fruchtgewichts", amount: "25 g" },
+      { name: "Bügelgläser", amount: "4 Stück" }
+    ],
+    hint:
+      "Deckel nur locker aufsetzen bzw. Gummiring abnehmen, damit die Gase entweichen können. Beeren mit einem Gewicht (z. B. wassergefüllter Zip-Beutel) unter dem austretenden Saft halten. Weissliche Kahmhefe an der Oberfläche ist harmlos: vorsichtig mit dem Löffel abheben. Leichtes Moussieren ist normal.",
+    steps: [
+      { from: 0, to: 0, title: "Ansetzen", text: "1250 g Blaubeeren mit 25 g Salz in einer Schüssel mischen, auf 4 Gläser verteilen, Salz sorgfältig aus der Schüssel kratzen, beschweren, Deckel locker aufsetzen." },
+      { from: 1, to: 3, title: "Täglich probieren & Gas prüfen", text: "Schon nach den ersten Tagen regelmässig kosten. Gase müssen entweichen können; Beeren unter dem Saft halten." },
+      { from: 4, to: 7, title: "Fertig? Geschmack entscheidet", text: "Nach 4–5 Tagen (28 °C) bzw. ein paar Tagen länger bei Zimmertemperatur: leicht gesäuert, aber noch süss und fruchtig." },
+      { from: 4, to: 7, label: "sobald fertig", title: "Saft abseihen & kühlen", text: "Beeren vorsichtig herausnehmen, Saft durch ein feines Sieb abseihen. Beeren und Saft getrennt im Kühlschrank einige Tage haltbar; für länger getrennt in Vakuum- oder Zip-Beuteln einfrieren." },
+      { from: 8, to: null, title: "Verwenden", text: "Joghurt + Honig, Müsli, Smoothie, Fruchtsauce für Eis oder Käse, Würzpaste (püriert und passiert) für Grillgut und Gemüse." }
+    ]
   }
 ];
