@@ -11,55 +11,6 @@
  */
 window.DEFAULT_PRODUCTS = [
   {
-    id: "ginger-bug",
-    name: "Ginger Bug",
-    type: "Wildhefe-Starter",
-    color: "#d99a2b",
-    start: "2026-09-08",
-    description:
-      "Ein wilder Hefe-/Bakterien-Starter aus Ingwer, Zucker und Wasser – die Basis für selbst fermentierte Limonaden (z. B. Ginger Beer). Angesetzt mit 48 g Ingwer, Zucker 1:1 zum Ingwer und ca. 480–500 ml Wasser. Läuft bei Raumtemperatur an und wird danach im Kühlschrank als Dauerkultur weitergeführt.",
-    ingredientsTitle: "Was ist drin",
-    ingredients: [
-      { name: "Bio-Ingwer, gehackt (mit Schale)", amount: "48 g" },
-      { name: "Zucker (weiss, ungebleicht), 1:1 zum Ingwer", amount: "48 g" },
-      { name: "Stilles Wasser, chlorfrei", amount: "ca. 480–500 ml" },
-      { name: "Glas, luftig mit Tuch abgedeckt", amount: "1 l" }
-    ],
-    hint:
-      "Täglich je 1 TL Ingwer + 1 TL Zucker nachfüttern und umrühren, bis er zuverlässig sprudelt. Kein Metalldeckel, kein Metalllöffel.",
-    steps: [
-      { from: 0, to: 0, title: "Ansetzen", text: "48 g Ingwer + 48 g Zucker + ca. 480–500 ml Wasser ansetzen, umrühren." },
-      { from: 1, to: 5, title: "Täglich füttern", text: "Je 1 TL Ingwer + 1 TL Zucker zugeben, umrühren." },
-      { from: 4, to: null, title: "Aktivitäts-Check", text: "Bläschenbildung prüfen; ohne Aktivität weiter füttern." },
-      { from: 6, to: 9, title: "Einsatzbereit", text: "Sprudelt zuverlässig – als Starter für Limonade nutzbar." },
-      { from: 10, to: null, title: "Erhaltung", text: "In den Kühlschrank; 1×/Woche mit je 1 TL Ingwer + Zucker füttern." }
-    ]
-  },
-  {
-    id: "basilikum",
-    name: "Basilikum",
-    type: "Milchsäure-Ferment · 3 l",
-    color: "#5d8a3c",
-    start: "2026-09-06",
-    description:
-      "Basilikumblätter in Salzlake, milchsauer fermentiert – ergibt ein würziges, haltbares Kraut zum Verfeinern von Saucen, Öl oder Pesto. Angesetzt im 3-Liter-Glas mit rund 2,5 l Lake (25 g Salz pro Liter, 2,5 %). Läuft bei Raumtemperatur an, reift danach im Kühlschrank nach.",
-    ingredientsTitle: "Was ist drin",
-    ingredients: [
-      { name: "Frische Basilikumblätter, gewaschen", amount: "281 g" },
-      { name: "Wasser, ungechlort", amount: "ca. 2.5 l" },
-      { name: "Salz (unjodiert), 25 g pro Liter (2,5 %)", amount: "ca. 63 g" },
-      { name: "Glas mit Gärgewicht, blattfrei unter der Lake", amount: "3 l" }
-    ],
-    hint:
-      "Alle 1–2 Tage kurz lüften (\"Burping\"). Blätter müssen komplett unter der Lake bleiben, sonst Schimmelgefahr.",
-    steps: [
-      { from: 0, to: 0, title: "Ansetzen", text: "281 g Blätter mit 2,5 %-Salzlake (25 g/l, ca. 2,5 l) ansetzen, Gärgewicht drauf." },
-      { from: 2, to: 3, title: "Erste Kontrolle", text: "Bläschen und leicht säuerlicher Geruch sind normal." },
-      { from: 6, to: null, title: "Geschmackstest", text: "Ab Tag 7 probieren, je nach gewünschter Säure weiterlaufen lassen." },
-      { from: 10, to: 14, title: "Fertig → Kühlschrank", text: "In den Kühlschrank umziehen; hält dort mehrere Monate." }
-    ]
-  },
-  {
     id: "kombucha-glas-1",
     name: "Kombucha Glas 1",
     type: "3 Liter · Haupt-SCOBY · F1",
