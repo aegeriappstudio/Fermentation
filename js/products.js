@@ -253,5 +253,30 @@ window.DEFAULT_PRODUCTS = [
       { from: 4, to: 7, label: "sobald fertig", title: "Saft abseihen & kühlen", text: "Beeren vorsichtig herausnehmen, Saft durch ein feines Sieb abseihen. Beeren und Saft getrennt im Kühlschrank einige Tage haltbar; für länger getrennt in Vakuum- oder Zip-Beuteln einfrieren." },
       { from: 8, to: null, title: "Verwenden", text: "Joghurt + Honig, Müsli, Smoothie, Fruchtsauce für Eis oder Käse, Würzpaste (püriert und passiert) für Grillgut und Gemüse." }
     ]
+  },
+  {
+    id: "knoblauch-honig",
+    name: "Knoblauch-Honig",
+    type: "Honig-Ferment · Bügelglas",
+    color: "#e0b13c",
+    start: "2026-09-13",
+    description:
+      "Geschälte Knoblauchzehen in rohem Honig, angesetzt am 13.09.2026. Die Zehen geben Feuchtigkeit ab, der Honig wird flüssiger und dunkler, und die wilden Hefen starten eine langsame Fermentation. Nach 1–2 Wochen zeigen sich Bläschen, nach 3–4 Wochen ist der Honig meist gut durchgezogen – manche lassen ihn monatelang reifen. Ergibt milden, süss-würzigen Knoblauch und aromatischen Honig für Marinaden, Dressings und Glasuren.",
+    ingredientsTitle: "Was ist drin",
+    ingredients: [
+      { name: "Knoblauchzehen, geschält, ganz", amount: "" },
+      { name: "Roher Honig, bis alle Zehen bedeckt sind", amount: "" },
+      { name: "Bügelglas", amount: "1 Stück" }
+    ],
+    hint:
+      "Bügelverschluss täglich kurz öffnen (Entlüften), besonders in den ersten 1–2 Wochen – sonst baut sich CO₂-Druck auf. Glas dabei kurz kippen, damit alle Zehen mit Honig benetzt bleiben. Kühl und dunkel lagern, nicht im Kühlschrank (Honig kristallisiert, Fermentation wird zu stark gebremst). Zeichen, dass es läuft: Bläschen, leichtes Blubbern beim Öffnen, dünnflüssigerer und dunklerer Honig.",
+    steps: [
+      { from: 0, to: 0, title: "Ansetzen", text: "Geschälte Zehen ins Glas, mit rohem Honig vollständig bedecken, Bügelverschluss schliessen." },
+      { from: 1, to: 6, title: "Erste Tage: täglich entlüften", text: "Bügelverschluss kurz öffnen, Glas kippen. Honig wird flüssiger – das ist normal." },
+      { from: 7, to: 14, title: "Bläschen erwartet – weiter täglich entlüften", text: "Nach 1–2 Wochen sichtbare Bläschen und leichtes Blubbern beim Öffnen. Druck täglich ablassen." },
+      { from: 15, to: 20, title: "Ruhen lassen", text: "Gasbildung lässt nach; alle paar Tage kurz öffnen und Glas kippen." },
+      { from: 21, to: 28, title: "Gut durchgezogen – probieren", text: "Nach 3–4 Wochen Honig und eine Zehe kosten: mild, süss-würzig, Honig dunkler und dünnflüssig." },
+      { from: 29, to: null, title: "Reifen lassen & verwenden", text: "Kühl und dunkel lagern, nicht im Kühlschrank. Wird mit Monaten immer runder." }
+    ]
   }
 ];
