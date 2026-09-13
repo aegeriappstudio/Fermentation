@@ -282,5 +282,30 @@ window.DEFAULT_PRODUCTS = [
       { from: 21, to: 28, title: "Gut durchgezogen – probieren", text: "Nach 3–4 Wochen Honig und eine Zehe kosten: mild, süss-würzig, Honig dunkler und dünnflüssig." },
       { from: 29, to: null, title: "Reifen lassen & verwenden", text: "Kühl und dunkel lagern, nicht im Kühlschrank. Wird mit Monaten immer runder." }
     ]
+  },
+  {
+    id: "lakto-tomatenwasser",
+    name: "Lakto-Tomatenwasser",
+    type: "Einmachglas · Gärgewicht · 2 % Salz",
+    color: "#c8452b",
+    start: "2026-09-13",
+    description:
+      "Milchsauer fermentierte Tomaten nach Noma-Art, angesetzt am 13.09.2026 im Einmachglas mit Gärgewicht, mit Tuch abgedeckt. Tomaten sind schon säuerlich und voller Umami – Ziel ist keine starke Säure, sondern eine ausgewogene Süss-Sauer-Balance, fast wie gekochte Tomatensauce. Bei 28 °C dauert es 4–5 Tage, bei Zimmertemperatur ein paar Tage länger. Ergebnis: Tomatenwasser (Dressing mit Dill für Fisch und Meeresfrüchte, Sud zum Dämpfen von Muscheln statt Weisswein, zum Einlegen von Gemüse) und Tomatenpulpe (ein Viertel der Passata im Ragù ersetzen, Bruschetta, mit Ricotta als Lasagnefüllung, unter Lammtatar, oder als Tomatenleder bei 50 °C getrocknet).",
+    ingredientsTitle: "Was ist drin",
+    ingredients: [
+      { name: "Reife Tomaten, ohne Strunk, geviertelt bzw. geachtelt", amount: "1130 g" },
+      { name: "Salz (unjodiert), 2 % des Fruchtgewichts", amount: "23 g" },
+      { name: "Einmachglas mit Gärgewicht, mit Tuch + Gummiband abgedeckt", amount: "1 Stück" }
+    ],
+    hint:
+      "Tomatenstücke mit dem Gewicht unter der austretenden Flüssigkeit halten; Deckel bzw. Tuch locker, damit Gase entweichen. Warm stellen. Schon nach den ersten Tagen regelmässig probieren. Weissliche Kahmhefe an der Oberfläche ist harmlos: vorsichtig mit dem Löffel abheben.",
+    steps: [
+      { from: 0, to: 0, title: "Ansetzen", text: "1130 g Tomaten mit 23 g Salz in einer Schüssel mischen, ins Glas füllen, Salz sorgfältig aus der Schüssel kratzen, mit Gewicht beschweren, abdecken." },
+      { from: 1, to: 3, title: "Täglich probieren", text: "Geschmackstest mit sauberem Löffel; Stücke unter der Flüssigkeit halten. Die Tomaten geben nach und nach reichlich Saft ab." },
+      { from: 4, to: 7, title: "Fertig? Geschmack entscheidet", text: "Nach 4–5 Tagen (28 °C) bzw. ein paar Tagen länger bei Zimmertemperatur: reichlich Flüssigkeit, Stücke ziemlich weich, Süsse und Säure ausgewogen." },
+      { from: 4, to: 7, label: "sobald fertig", title: "Abtropfen lassen", text: "Feines Sieb mit Passiertuch auslegen, auf eine Schüssel setzen, Tomaten samt Flüssigkeit hineingiessen, mit Frischhaltefolie abdecken und über Nacht im Kühlschrank abtropfen lassen. Am nächsten Tag ein paarmal mit der flachen Hand ans Sieb klopfen – Pulpe nicht durchdrücken." },
+      { from: 5, to: 8, label: "am Tag danach", title: "Tomatenwasser & Pulpe trennen", text: "Getrennt im Kühlschrank einige Tage haltbar; für länger getrennt in Vakuum- oder Zip-Beuteln (Luft herausgedrückt) einfrieren." },
+      { from: 9, to: null, title: "Verwenden", text: "Tomatenwasser: Kräuterdressing (Dill, Schnittlauch, Basilikum, Shiso) mit Olivenöl für Fisch und Meeresfrüchte, Muscheln darin dämpfen, knackiges Gemüse darin über Nacht einlegen. Pulpe: Ragù, Bruschetta, Lasagnefüllung oder Tomatenleder." }
+    ]
   }
 ];
