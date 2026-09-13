@@ -307,5 +307,31 @@ window.DEFAULT_PRODUCTS = [
       { from: 5, to: 8, label: "am Tag danach", title: "Tomatenwasser & Pulpe trennen", text: "Getrennt im Kühlschrank einige Tage haltbar; für länger getrennt in Vakuum- oder Zip-Beuteln (Luft herausgedrückt) einfrieren." },
       { from: 9, to: null, title: "Verwenden", text: "Tomatenwasser: Kräuterdressing (Dill, Schnittlauch, Basilikum, Shiso) mit Olivenöl für Fisch und Meeresfrüchte, Muscheln darin dämpfen, knackiges Gemüse darin über Nacht einlegen. Pulpe: Ragù, Bruschetta, Lasagnefüllung oder Tomatenleder." }
     ]
+  },
+  {
+    id: "ginger-bug-2",
+    name: "Ginger Bug",
+    type: "2. Versuch · Wildhefe-Starter · 250 ml",
+    color: "#d99a2b",
+    start: "2026-09-13",
+    description:
+      "Starterkultur auf Ingwerbasis nach Sandor Ellix Katz («Die Fermentier-Bibel»), zweiter Versuch, angesetzt am 13.09.2026. Basiert auf den Hefen und Bakterien im Ingwer – unbedingt Bio-Ingwer mit Schale, importierter Ingwer ist oft bestrahlt und dann wirkungslos. Wasser, Zucker und geriebener Ingwer beginnen nach 2–4 Tagen aktiv zu fermentieren. Der aktive Starter ist die Basis für Ginger Beer (Ingwersprudel), Root- und Barkbeer.",
+    ingredientsTitle: "Was ist drin (für 250 ml)",
+    ingredients: [
+      { name: "Frischer Bio-Ingwer, gerieben, mit Schale (2,5 cm zum Start, Rest später)", amount: "5 cm oder mehr" },
+      { name: "Zucker (2 EL zum Start, Rest beim Füttern)", amount: "60 g" },
+      { name: "Wasser", amount: "250 ml" },
+      { name: "Glas oder kleine Schüssel, mit Tuch abgedeckt", amount: "500 ml" }
+    ],
+    hint:
+      "An einem warmen Ort stehen lassen. Mindestens 2× am Tag umrühren, so oft wie möglich. Mit Tuch abdecken, damit Luft zirkuliert und Fliegen draussen bleiben. Kein Metalldeckel. Wird länger als ein paar Tage gewartet, den Starter alle 2 Tage mit frischem Ingwer und Zucker füttern, damit er lebhaft bleibt.",
+    steps: [
+      { from: 0, to: 0, title: "Ansetzen", text: "2,5 cm Ingwer reiben (Schale dranlassen), mit 2 EL Zucker in 250 ml Wasser geben, gründlich umrühren, mit Tuch abdecken." },
+      { from: 1, to: 3, title: "2× täglich umrühren", text: "Mindestens zweimal am Tag umrühren, bis der Starter Bläschen entwickelt (nach 2–4 Tagen)." },
+      { from: 1, to: 1, title: "Füttern: restlichen Ingwer + Zucker", text: "Nochmals 2,5 cm geriebenen Ingwer und 2 EL Zucker zugeben und umrühren." },
+      { from: 2, to: 5, title: "Jeden Tag oder alle 2 Tage füttern", text: "Ingwer + Zucker zugeben und umrühren, bis der Starter zuverlässig sprudelt." },
+      { from: 3, to: null, title: "Aktiv? Ingwersprudel ansetzen", text: "Sobald Bläschen und Zischen da sind, ist der Starter bereit für Ginger Beer. Wer wartet: alle 2 Tage füttern." },
+      { from: 6, to: null, title: "Erhaltung", text: "Alle 2 Tage mit frischem Ingwer und Zucker füttern, damit der Starter gesund und lebhaft bleibt." }
+    ]
   }
 ];
