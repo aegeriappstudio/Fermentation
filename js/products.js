@@ -5,6 +5,7 @@
  *   to = null  → offener Schritt ("ab dd.mm.")
  *   label      → optionale feste Anzeige statt berechnetem Datum (z. B. "+2–3 Tage")
  * color = Farbe der Flüssigkeit im Glas (Hex), optional.
+ * log   = Protokoll-Einträge [{ date: "YYYY-MM-DD", text: "…" }], optional.
  *
  * Neue Produkte, die auf der Seite angelegt werden, landen im Browser-Speicher.
  * Damit sie für alle Besucher sichtbar sind, hier eintragen (siehe README).
@@ -119,6 +120,9 @@ window.DEFAULT_PRODUCTS = [
     ],
     hint:
       "Täglich kontrollieren und probieren. Bläht sich der Beutel wie ein Ballon: Ecke abschneiden («Rülpser»), Gas entweichen lassen, kosten, wieder vakuumieren – dabei keinen Saft absaugen. Leichtes Moussieren ist normal. Dünne weissliche Kahmhefe ist harmlos: vorsichtig mit dem Löffel abheben.",
+    log: [
+      { date: "2026-09-13", text: "Beutel geöffnet (Rülpser), Gas abgelassen und neu vakuumiert." }
+    ],
     steps: [
       { from: 0, to: 0, title: "Ansetzen", text: "1 kg Pflaumen halbieren, Steine entfernen, 20 g Meersalz untermischen, in Reihen mit Schnittfläche nach unten in den Beutel, auf höchster Stufe vakuumieren." },
       { from: 1, to: 4, title: "Täglich prüfen & probieren", text: "Beutel anschauen: prall wie ein Ballon → Rülpser machen, probieren, neu versiegeln. Die Süsse wandelt sich langsam in sanfte Säure." },
@@ -143,6 +147,9 @@ window.DEFAULT_PRODUCTS = [
     ],
     hint:
       "Täglich kontrollieren und probieren. Bläht sich der Beutel wie ein Ballon: Ecke abschneiden («Rülpser»), Gas entweichen lassen, kosten, wieder vakuumieren – dabei keinen Saft absaugen. Leichtes Moussieren ist normal. Dünne weissliche Kahmhefe ist harmlos: vorsichtig mit dem Löffel abheben.",
+    log: [
+      { date: "2026-09-13", text: "Beutel geöffnet (Rülpser), Gas abgelassen und neu vakuumiert." }
+    ],
     steps: [
       { from: 0, to: 0, title: "Ansetzen", text: "1085 g Pflaumen halbieren, Steine entfernen, 21,7 g Meersalz untermischen, in Reihen mit Schnittfläche nach unten in den Beutel, auf höchster Stufe vakuumieren." },
       { from: 1, to: 4, title: "Täglich prüfen & probieren", text: "Beutel anschauen: prall wie ein Ballon → Rülpser machen, probieren, neu versiegeln. Die Süsse wandelt sich langsam in sanfte Säure." },

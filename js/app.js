@@ -372,9 +372,17 @@
       return li;
     }));
 
+    const log = (p.log || []).slice().sort((a, b) => String(b.date).localeCompare(String(a.date)));
     const plan = el("div", null, [
       el("h4", { text: "Fahrplan" }),
-      timeline
+      timeline,
+      log.length ? el("div", { class: "log" }, [
+        el("h4", { text: "Protokoll" }),
+        el("ul", { class: "log-list" }, log.map((e) => el("li", null, [
+          el("span", { class: "log-date", text: fmtShort(parseISO(e.date)) }),
+          el("span", { class: "log-text", text: e.text })
+        ])))
+      ]) : null
     ]);
 
     return el("article", { class: "product", id: `p-${p.id}`, style: `--jar:${productColor(p)}` }, [

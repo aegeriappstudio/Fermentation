@@ -46,6 +46,7 @@ wird, in `js/products.js` eintragen. Format:
   ingredientsTitle: "Was ist drin", // optional
   ingredients: [{ name: "Weisskohl", amount: "1 kg" }],
   hint: "…",                        // Pflegehinweis (optional)
+  log: [ { date: "2026-09-13", text: "Beutel geöffnet und neu vakuumiert." } ], // Protokoll, optional
   steps: [
     // from/to = Tage ab Start (0 = Starttag); to: null = offener Schritt («ab …»)
     { from: 0, to: 0, title: "Ansetzen", text: "…" },
