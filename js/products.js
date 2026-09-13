@@ -11,30 +11,72 @@
  */
 window.DEFAULT_PRODUCTS = [
   {
-    id: "kombucha-glas-1",
-    name: "Kombucha Glas 1",
-    type: "3 Liter · Haupt-SCOBY · F1",
+    id: "kombucha-f2-flasche-1",
+    name: "Kombucha Flasche 1",
+    type: "F2 · 1 Liter · Flaschengärung",
     color: "#b0642f",
-    start: "2026-09-03",
+    start: "2026-09-13",
     description:
-      "Gesüsster Tee mit SCOBY, zu einem spritzigen Getränk fermentiert. Grosses 3-Liter-Glas mit dem Haupt-SCOBY. Weil der SCOBY geschwächt war und das Volumen grösser ist, dauert die Primärfermentation (F1) länger: 10–14 Tage, evtl. auch bis zu 3 Wochen, bis sich eine spürbare Säure und eine neue Haut zeigen. Danach Abfüllen und optionale Flaschengärung (F2) für Kohlensäure und Aroma.",
-    ingredientsTitle: "Was ist drin (Grundrezept pro Liter)",
+      "Zweite Fermentation (F2) des Kombuchas aus dem 3-Liter-Glas, am 13.09.2026 in eine 1-Liter-Flasche abgefüllt. Luftdicht verschlossen bei Raumtemperatur bildet sich Kohlensäure; danach kühl stellen. Optional mit Frucht oder Ingwer aromatisiert.",
+    ingredientsTitle: "Was ist drin",
     ingredients: [
-      { name: "Schwarz- oder Grüntee, gezogen", amount: "1 l" },
-      { name: "Zucker", amount: "70 g" },
-      { name: "SCOBY (Hauptkultur, geschwächt)", amount: "1 Stück" },
-      { name: "Ansatzflüssigkeit (fertiger Kombucha)", amount: "100 ml" },
-      { name: "Glas", amount: "3 l" }
+      { name: "Fertiger Kombucha aus F1 (3-Liter-Glas)", amount: "1 l" },
+      { name: "Frucht / Ingwer zum Aromatisieren", amount: "optional" },
+      { name: "Druckfeste Flasche, luftdicht", amount: "1 Stück" }
     ],
     hint:
-      "Abdeckung mit Tuch + Gummiband, dunkel und warm (23–27 °C). Immer mit sauberem Löffel oder Röhrchen probieren, nie direkt aus dem Glas trinken.",
+      "Flasche täglich vorsichtig kurz öffnen, um den Druck zu prüfen und ein Überschäumen oder Platzen zu vermeiden. Nicht länger als nötig bei Raumtemperatur lassen. Nach dem Kühlen bleibt die Kohlensäure erhalten.",
     steps: [
-      { from: 0, to: 0, title: "Ansetzen (F1)", text: "Gesüssten Tee + SCOBY + Ansatzflüssigkeit ins 3-Liter-Glas." },
-      { from: 6, to: null, title: "Gelegentlich probieren", text: "Ab Tag 7 mit sauberem Löffel oder Röhrchen kosten, um den Fortschritt zu checken." },
-      { from: 9, to: 13, title: "Säure & neue Haut erwartet", text: "Nach 10–14 Tagen sollten spürbare Säure und eine neue Haut da sein. Weiter probieren, bis Süsse/Säure ausgewogen ist." },
-      { from: 14, to: 20, title: "Geduld bis 3 Wochen", text: "Falls noch zu süss oder ohne neue Haut: weiterlaufen lassen und alle 1–2 Tage probieren." },
-      { from: 13, to: 20, label: "sobald ausgewogen", title: "F1 abschliessen", text: "SCOBY + 100 ml Ansatzflüssigkeit für den nächsten Batch zurückbehalten, Rest abfüllen." },
-      { from: 15, to: 23, label: "+2–3 Tage", title: "F2 – Flaschengärung", text: "Abgefüllt mit Frucht/Ingwer, luftdicht, Raumtemperatur zur Karbonisierung, danach kühlen." }
+      { from: 0, to: 0, title: "Abfüllen (F2)", text: "1 l Kombucha luftdicht in die Flasche, bei Raumtemperatur stehen lassen." },
+      { from: 1, to: 2, title: "Druck prüfen", text: "Täglich kurz öffnen: Zischt es deutlich, ist die Kohlensäure da. Bei Bedarf probieren." },
+      { from: 2, to: 3, title: "Fertig → Kühlschrank", text: "Nach 2–3 Tagen kühl stellen, damit die Gärung stoppt und die Kohlensäure bleibt." },
+      { from: 4, to: null, title: "Geniessen", text: "Gekühlt trinken; vor dem Öffnen nicht schütteln." }
+    ]
+  },
+  {
+    id: "kombucha-f2-flasche-2",
+    name: "Kombucha Flasche 2",
+    type: "F2 · 1 Liter · Flaschengärung",
+    color: "#c07a45",
+    start: "2026-09-13",
+    description:
+      "Zweite Fermentation (F2) des Kombuchas aus dem 3-Liter-Glas, am 13.09.2026 in eine 1-Liter-Flasche abgefüllt. Luftdicht verschlossen bei Raumtemperatur bildet sich Kohlensäure; danach kühl stellen. Optional mit Frucht oder Ingwer aromatisiert.",
+    ingredientsTitle: "Was ist drin",
+    ingredients: [
+      { name: "Fertiger Kombucha aus F1 (3-Liter-Glas)", amount: "1 l" },
+      { name: "Frucht / Ingwer zum Aromatisieren", amount: "optional" },
+      { name: "Druckfeste Flasche, luftdicht", amount: "1 Stück" }
+    ],
+    hint:
+      "Flasche täglich vorsichtig kurz öffnen, um den Druck zu prüfen und ein Überschäumen oder Platzen zu vermeiden. Nicht länger als nötig bei Raumtemperatur lassen. Nach dem Kühlen bleibt die Kohlensäure erhalten.",
+    steps: [
+      { from: 0, to: 0, title: "Abfüllen (F2)", text: "1 l Kombucha luftdicht in die Flasche, bei Raumtemperatur stehen lassen." },
+      { from: 1, to: 2, title: "Druck prüfen", text: "Täglich kurz öffnen: Zischt es deutlich, ist die Kohlensäure da. Bei Bedarf probieren." },
+      { from: 2, to: 3, title: "Fertig → Kühlschrank", text: "Nach 2–3 Tagen kühl stellen, damit die Gärung stoppt und die Kohlensäure bleibt." },
+      { from: 4, to: null, title: "Geniessen", text: "Gekühlt trinken; vor dem Öffnen nicht schütteln." }
+    ]
+  },
+  {
+    id: "kombucha-5l",
+    name: "Kombucha 5-Liter-Glas",
+    type: "5 Liter · Haupt-SCOBY · F1",
+    color: "#9a5227",
+    start: "2026-09-13",
+    description:
+      "Neuer F1-Ansatz im 5-Liter-Glas, gestartet am 13.09.2026: Der Rest des Kombuchas aus dem 3-Liter-Glas (mit SCOBY und Ansatzflüssigkeit) wurde umgefüllt und wird mit frischem, gesüsstem Tee aufgefüllt. Läuft abgedeckt bei Raumtemperatur, bis Süsse und Säure ausgewogen sind; danach abfüllen und optional F2.",
+    ingredientsTitle: "Was ist drin",
+    ingredients: [
+      { name: "Rest-Kombucha aus dem 3-Liter-Glas (mit SCOBY)", amount: "" },
+      { name: "Frischer gesüsster Tee (70 g Zucker pro Liter), zum Auffüllen", amount: "nach Bedarf" },
+      { name: "Glas", amount: "5 l" }
+    ],
+    hint:
+      "Abdeckung mit Tuch + Gummiband, dunkel und warm (23–27 °C). Tee vor dem Zugeben vollständig abkühlen lassen. Immer mit sauberem Löffel oder Röhrchen probieren.",
+    steps: [
+      { from: 0, to: 0, title: "Umfüllen & neuen Tee zugeben", text: "Rest-Kombucha mit SCOBY ins 5-Liter-Glas, mit abgekühltem gesüsstem Tee auffüllen, abdecken." },
+      { from: 1, to: 4, title: "Ruhen lassen", text: "Nichts zu tun – warm und dunkel stehen lassen. Sichtkontrolle: neue Haut an der Oberfläche ist ein gutes Zeichen." },
+      { from: 5, to: null, title: "Alle 1–2 Tage probieren", text: "Ab Tag 6 mit Löffel oder Röhrchen kosten, bis Süsse/Säure ausgewogen ist." },
+      { from: 7, to: 14, label: "sobald ausgewogen", title: "F1 abschliessen", text: "SCOBY + Ansatzflüssigkeit für den nächsten Batch zurückbehalten, Rest in Flaschen abfüllen (F2 optional)." }
     ]
   },
   {
