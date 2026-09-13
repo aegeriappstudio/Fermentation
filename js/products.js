@@ -64,17 +64,21 @@ window.DEFAULT_PRODUCTS = [
     color: "#9a5227",
     start: "2026-09-13",
     description:
-      "Neuer F1-Ansatz im 5-Liter-Glas, gestartet am 13.09.2026: Der Rest des Kombuchas aus dem 3-Liter-Glas (mit SCOBY und Ansatzflüssigkeit) wurde umgefüllt und wird mit frischem, gesüsstem Tee aufgefüllt. Läuft abgedeckt bei Raumtemperatur, bis Süsse und Säure ausgewogen sind; danach abfüllen und optional F2.",
+      "Neuer F1-Ansatz im 5-Liter-Glas, gestartet am 13.09.2026: Der Rest des Kombuchas aus dem 3-Liter-Glas (mit SCOBY und Ansatzflüssigkeit) wurde umgefüllt und mit 4,5 l frischem, gesüsstem Tee (45 g Tee, 310 g Zucker) aufgefüllt. Läuft abgedeckt bei Raumtemperatur, bis Süsse und Säure ausgewogen sind; danach abfüllen und optional F2.",
     ingredientsTitle: "Was ist drin",
     ingredients: [
       { name: "Rest-Kombucha aus dem 3-Liter-Glas (mit SCOBY)", amount: "" },
-      { name: "Frischer gesüsster Tee (70 g Zucker pro Liter), zum Auffüllen", amount: "nach Bedarf" },
+      { name: "Frischer Tee, gezogen (45 g Teeblätter)", amount: "4.5 l" },
+      { name: "Zucker (ca. 69 g pro Liter)", amount: "310 g" },
       { name: "Glas", amount: "5 l" }
     ],
     hint:
       "Abdeckung mit Tuch + Gummiband, dunkel und warm (23–27 °C). Tee vor dem Zugeben vollständig abkühlen lassen. Immer mit sauberem Löffel oder Röhrchen probieren.",
+    log: [
+      { date: "2026-09-13", text: "Neuer Tee zugegeben: 4,5 l mit 45 g Tee und 310 g Zucker." }
+    ],
     steps: [
-      { from: 0, to: 0, title: "Umfüllen & neuen Tee zugeben", text: "Rest-Kombucha mit SCOBY ins 5-Liter-Glas, mit abgekühltem gesüsstem Tee auffüllen, abdecken." },
+      { from: 0, to: 0, title: "Umfüllen & neuen Tee zugeben", text: "Rest-Kombucha mit SCOBY ins 5-Liter-Glas, 4,5 l abgekühlten Tee (45 g Tee, 310 g Zucker) zugeben, abdecken." },
       { from: 1, to: 4, title: "Ruhen lassen", text: "Nichts zu tun – warm und dunkel stehen lassen. Sichtkontrolle: neue Haut an der Oberfläche ist ein gutes Zeichen." },
       { from: 5, to: null, title: "Alle 1–2 Tage probieren", text: "Ab Tag 6 mit Löffel oder Röhrchen kosten, bis Süsse/Säure ausgewogen ist." },
       { from: 7, to: 14, label: "sobald ausgewogen", title: "F1 abschliessen", text: "SCOBY + Ansatzflüssigkeit für den nächsten Batch zurückbehalten, Rest in Flaschen abfüllen (F2 optional)." }
