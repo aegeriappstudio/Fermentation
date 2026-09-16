@@ -15,7 +15,8 @@
     { color: "#e0c04a", name: "Honig" },
     { color: "#7fa7b5", name: "Wasserkefir" },
     { color: "#9e3d5c", name: "Pflaume" },
-    { color: "#4a3f8f", name: "Blaubeere" }
+    { color: "#4a3f8f", name: "Blaubeere" },
+    { color: "#e07b2a", name: "Kürbis" }
   ];
 
   /* ---------- Speicher ---------- */

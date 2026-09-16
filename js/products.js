@@ -333,5 +333,57 @@ window.DEFAULT_PRODUCTS = [
       { from: 3, to: null, title: "Aktiv? Ingwersprudel ansetzen", text: "Sobald Bläschen und Zischen da sind, ist der Starter bereit für Ginger Beer. Wer wartet: alle 2 Tage füttern." },
       { from: 6, to: null, title: "Erhaltung", text: "Alle 2 Tage mit frischem Ingwer und Zucker füttern, damit der Starter gesund und lebhaft bleibt." }
     ]
+  },
+  {
+    id: "kuerbis-1",
+    name: "Kürbis Glas 1",
+    type: "Glas 1 von 2 · Salzlake 2 %",
+    color: "#e07b2a",
+    start: "2026-09-16",
+    description:
+      "Oranger Knirps-Kürbis, geschält, entkernt und in dünne Scheiben (ca. 3–4 mm) geschnitten, in 2 %-Salzlake milchsauer fermentiert. Glas 1 von zwei, angesetzt am 16.09.2026. Bei Raumtemperatur (18–22 °C) nach ca. 5–8 Tagen fertig: leicht säuerlich mit noch etwas Biss. Danach fest verschlossen im Kühlschrank mehrere Wochen bis Monate haltbar.",
+    ingredientsTitle: "Was ist drin",
+    ingredients: [
+      { name: "Oranger Knirps-Kürbis, geschält, entkernt, dünne Scheiben (3–4 mm)", amount: "193 g" },
+      { name: "Wasser", amount: "ca. 180 ml" },
+      { name: "Salz, 2 % der Wassermenge", amount: "ca. 3.6 g" },
+      { name: "Glas mit Gärgewicht, locker abgedeckt", amount: "1 Stück" }
+    ],
+    hint:
+      "Gärgewicht drauf, damit nichts an der Oberfläche schwimmt. Glas locker abgedeckt, nicht luftdicht, damit CO₂ entweichen kann. Weisser Belag (Kahmhefe) ist unbedenklich: abschöpfen. Schimmel (schwarz, grün, pelzig): entsorgen.",
+    steps: [
+      { from: 0, to: 0, title: "Ansetzen", text: "Kürbisscheiben ins Glas schichten, Lake aus 180 ml Wasser + 3,6 g Salz übergiessen bis alles bedeckt ist, Gärgewicht drauf, locker abdecken." },
+      { from: 1, to: 1, title: "Kontrolle", text: "Alles unter der Lake? Deckel locker? Bei Raumtemperatur (18–22 °C) stehen lassen." },
+      { from: 2, to: 7, title: "Täglich probieren", text: "Ab Tag 3 täglich eine Scheibe kosten: Säure und Biss beurteilen." },
+      { from: 4, to: 7, title: "Fertig? Geschmack entscheidet", text: "Nach ca. 5–8 Tagen: leicht säuerlich, noch etwas Biss." },
+      { from: 4, to: 7, label: "sobald fertig", title: "Deckel fest → Kühlschrank", text: "Gärgewicht kann bleiben; Deckel fest verschliessen und kühl stellen." },
+      { from: 8, to: null, title: "Lagern & geniessen", text: "Im Kühlschrank hält der Kürbis mehrere Wochen bis Monate." }
+    ]
+  },
+  {
+    id: "kuerbis-2",
+    name: "Kürbis Glas 2",
+    type: "Glas 2 von 2 · Salzlake 2 %",
+    color: "#ea9448",
+    start: "2026-09-16",
+    description:
+      "Oranger Knirps-Kürbis, geschält, entkernt und in dünne Scheiben (ca. 3–4 mm) geschnitten, in 2 %-Salzlake milchsauer fermentiert. Glas 2 von zwei, angesetzt am 16.09.2026. Bei Raumtemperatur (18–22 °C) nach ca. 5–8 Tagen fertig: leicht säuerlich mit noch etwas Biss. Danach fest verschlossen im Kühlschrank mehrere Wochen bis Monate haltbar.",
+    ingredientsTitle: "Was ist drin",
+    ingredients: [
+      { name: "Oranger Knirps-Kürbis, geschält, entkernt, dünne Scheiben (3–4 mm)", amount: "194 g" },
+      { name: "Wasser", amount: "ca. 180 ml" },
+      { name: "Salz, 2 % der Wassermenge", amount: "ca. 3.6 g" },
+      { name: "Glas mit Gärgewicht, locker abgedeckt", amount: "1 Stück" }
+    ],
+    hint:
+      "Gärgewicht drauf, damit nichts an der Oberfläche schwimmt. Glas locker abgedeckt, nicht luftdicht, damit CO₂ entweichen kann. Weisser Belag (Kahmhefe) ist unbedenklich: abschöpfen. Schimmel (schwarz, grün, pelzig): entsorgen.",
+    steps: [
+      { from: 0, to: 0, title: "Ansetzen", text: "Kürbisscheiben ins Glas schichten, Lake aus 180 ml Wasser + 3,6 g Salz übergiessen bis alles bedeckt ist, Gärgewicht drauf, locker abdecken." },
+      { from: 1, to: 1, title: "Kontrolle", text: "Alles unter der Lake? Deckel locker? Bei Raumtemperatur (18–22 °C) stehen lassen." },
+      { from: 2, to: 7, title: "Täglich probieren", text: "Ab Tag 3 täglich eine Scheibe kosten: Säure und Biss beurteilen." },
+      { from: 4, to: 7, title: "Fertig? Geschmack entscheidet", text: "Nach ca. 5–8 Tagen: leicht säuerlich, noch etwas Biss." },
+      { from: 4, to: 7, label: "sobald fertig", title: "Deckel fest → Kühlschrank", text: "Gärgewicht kann bleiben; Deckel fest verschliessen und kühl stellen." },
+      { from: 8, to: null, title: "Lagern & geniessen", text: "Im Kühlschrank hält der Kürbis mehrere Wochen bis Monate." }
+    ]
   }
 ];
