@@ -221,5 +221,39 @@ window.DEFAULT_PRODUCTS = [
       { from: 3, to: 6, label: "sobald fertig", title: "Saft abseihen & kühlen", text: "Beeren vorsichtig herausnehmen, Saft durch ein feines Sieb abseihen. Getrennt im Kühlschrank einige Tage haltbar; für länger getrennt einfrieren." },
       { from: 7, to: null, title: "Verwenden", text: "Saft als Vinaigrette oder mit Sprudelwasser, Beeren zu Eis, Panna cotta, Joghurt oder jungem Käse." }
     ]
+  },
+  {
+    id: "kimchi-1",
+    name: "Kimchi Nr. 1",
+    type: "Bügelglas 3 l · 1,25 kg Chinakohl · Kimchi Base",
+    color: "#c8452b",
+    start: "2026-10-04",
+    description:
+      "Erstes Kimchi, angesetzt am Sonntag, 4. Oktober 2026 um ca. 22:00 Uhr im grossen 3-Liter-Bügelglas. Chinakohl mit 6 % grobem Salz einmassiert, 2 Stunden ziehen lassen (alle 30 Min. gewendet), 3× kalt gespült, ca. 20 Min. abgetropft und leicht ausgedrückt. Surasang Kimchi Base mit Knoblauch, Ingwer und Fischsauce verrührt, Kohl, Karotten und Frühlingszwiebeln untergemischt, portionsweise ins Glas gepresst und den Saft darübergegossen – der Kohl liegt vollständig unter der Flüssigkeit. Besonderheiten: statt Gochugaru eine fertige Kimchi Base (enthält Zucker, Maissirup und Konservierungsmittel E202), die Gärung startet darum eventuell langsamer; statt Rettich nur Karotten.",
+    ingredientsTitle: "Was ist drin",
+    ingredients: [
+      { name: "Chinakohl, geschnitten", amount: "1.25 kg" },
+      { name: "Grobes Salz ohne Jod (6 % vom Kohl)", amount: "75 g" },
+      { name: "Surasang Kimchi Base (Glas à 453 g)", amount: "ca. 300–375 g" },
+      { name: "Karotten, geraffelt (Migros)", amount: "250 g" },
+      { name: "Frühlingszwiebeln, in 3 cm Stücken", amount: "1 Bund" },
+      { name: "Knoblauch, gepresst", amount: "4 Zehen" },
+      { name: "Ingwer, gerieben", amount: "ca. 20 g" },
+      { name: "Fischsauce (optional)", amount: "1 EL" },
+      { name: "Bügelverschlussglas, auf einem Teller", amount: "3 l" }
+    ],
+    hint:
+      "Glas bei Raumtemperatur auf einen Teller stellen – beim Gären kann Saft austreten. Täglich kurz öffnen (Druck ablassen) und das Kimchi mit einem sauberen Löffel unter die Flüssigkeit drücken. Riechprobe entscheidet: säuerlich und Bläschen sichtbar → ab in den Kühlschrank. Wegen der fertigen Kimchi Base (Zucker, Konservierungsmittel) kann die Gärung etwas langsamer starten; im Zweifel einen Tag länger warten. Rest der Kimchi Base im Kühlschrank lagern und innert 2 Wochen aufbrauchen.",
+    log: [
+      { date: "2026-10-04", text: "Angesetzt um ca. 22:00 Uhr: 1,25 kg Chinakohl, 75 g Salz, ca. 300–375 g Kimchi Base, 250 g Karotten, 1 Bund Frühlingszwiebeln, 4 Zehen Knoblauch, 20 g Ingwer, 1 EL Fischsauce. Kohl liegt vollständig unter der Flüssigkeit." }
+    ],
+    steps: [
+      { from: 0, to: 0, title: "Ansetzen", text: "Kohl mit Salz einmassiert (2 h, alle 30 Min. gewendet), 3× gespült, abgetropft, mit Kimchi Base, Knoblauch, Ingwer, Fischsauce, Karotten und Frühlingszwiebeln gemischt, ins Glas gepresst, Saft darüber." },
+      { from: 1, to: 3, title: "Bei Raumtemperatur gären lassen", text: "Glas auf einem Teller stehen lassen. Täglich kurz öffnen und mit sauberem Löffel runterdrücken, damit alles unter der Flüssigkeit bleibt." },
+      { from: 2, to: 3, title: "Riechprobe am Abend", text: "Säuerlich und Bläschen sichtbar? Dann in den Kühlschrank. Falls nicht, einen Tag länger warten." },
+      { from: 2, to: 4, label: "sobald säuerlich", title: "In den Kühlschrank", text: "Bügelverschluss schliessen und kühl stellen. Die Gärung läuft im Kühlschrank langsam weiter." },
+      { from: 10, to: null, title: "Geschmack am besten – geniessen", text: "Ab ca. 14.10. ist das Kimchi am besten; hält im Kühlschrank mehrere Wochen." },
+      { from: 0, to: 14, label: "bis ca. 18.10.", title: "Rest der Kimchi Base aufbrauchen", text: "Angebrochenes Glas Kimchi Base im Kühlschrank lagern und innert 2 Wochen aufbrauchen." }
+    ]
   }
 ];
