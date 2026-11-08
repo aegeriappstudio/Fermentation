@@ -255,5 +255,32 @@ window.DEFAULT_PRODUCTS = [
       { from: 10, to: null, title: "Geschmack am besten – geniessen", text: "Ab ca. 14.10. ist das Kimchi am besten; hält im Kühlschrank mehrere Wochen." },
       { from: 0, to: 14, label: "bis ca. 18.10.", title: "Rest der Kimchi Base aufbrauchen", text: "Angebrochenes Glas Kimchi Base im Kühlschrank lagern und innert 2 Wochen aufbrauchen." }
     ]
+  },
+  {
+    id: "schwarze-chilis-vakuum",
+    name: "Schwarze Chilis (Pimenta da Neyde)",
+    type: "Vakuumbeutel · 323 g Chilis · 9 g Salz (2,8 %)",
+    color: "#3b1f2b",
+    start: "2026-11-08",
+    description:
+      "Schwarze Chilis der Sorte Pimenta da Neyde, angesetzt am 08.11.2026 im Vakuumbeutel. Gewaschen, Stiele entfernt, im Thermomix grob gehackt (Stufe 5, wenige Sekunden), mit 9 g Meersalz (2,8 %) vermischt und in einem grossen Beutel vakuumiert. Dunkel bei 18–22 °C lagern. Reif nach 3–4 Wochen, also ab etwa 29. November. Danach zu Hot Sauce verarbeiten: mit Essig pürieren, nach Wunsch Knoblauch und Zucker dazu, durch ein Sieb streichen, abfüllen und kühl lagern.",
+    ingredientsTitle: "Was ist drin",
+    ingredients: [
+      { name: "Schwarze Chilis (Pimenta da Neyde), gewaschen, ohne Stiele, grob gehackt", amount: "323 g" },
+      { name: "Meersalz, 2,8 % des Chiligewichts", amount: "9 g" },
+      { name: "Grosser Vakuumbeutel", amount: "1 Stück" }
+    ],
+    hint:
+      "Dunkel bei 18–22 °C lagern. Ab Tag 2–3 kontrollieren: Der Beutel bläht sich durch das CO₂ auf. Bei starkem Aufblähen eine Ecke aufschneiden, Gas entweichen lassen und neu verschweissen. Beim Hantieren Handschuhe tragen – die Chilis sind scharf.",
+    log: [
+      { date: "2026-11-08", text: "Angesetzt: 323 g Chilis, im Thermomix grob gehackt (Stufe 5, wenige Sekunden), mit 9 g Meersalz (2,8 %) im grossen Beutel vakuumiert." }
+    ],
+    steps: [
+      { from: 0, to: 0, title: "Ansetzen", text: "Chilis waschen, Stiele ab, im Thermomix grob hacken (Stufe 5, wenige Sekunden), mit 9 g Meersalz mischen und im grossen Beutel vakuumieren." },
+      { from: 1, to: 1, title: "Dunkel lagern", text: "Beutel dunkel bei 18–22 °C hinlegen." },
+      { from: 2, to: 20, title: "Kontrollieren & entgasen", text: "Ab Tag 2–3 regelmässig prüfen. Bei starkem Aufblähen eine Ecke öffnen, Gas ablassen und neu verschweissen." },
+      { from: 21, to: 28, title: "Reif – Hot Sauce machen", text: "Ab ca. 29.11. (nach 3–4 Wochen): mit Essig pürieren, nach Wunsch Knoblauch und Zucker dazu, durch ein Sieb streichen, abfüllen." },
+      { from: 29, to: null, title: "Kühl lagern & geniessen", text: "Abgefüllte Sauce im Kühlschrank aufbewahren." }
+    ]
   }
 ];
