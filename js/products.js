@@ -14,7 +14,7 @@ window.DEFAULT_PRODUCTS = [
   {
     id: "scoby-hotel",
     name: "SCOBY-Hotel",
-    type: "3 SCOBYs · Reserve-Kulturen · kein laufender Kombucha",
+    type: "Vorübergehend aufgelöst · alle SCOBYs im Mate-Kombucha",
     color: "#a86a3a",
     start: "2026-10-04",
     description:
@@ -28,13 +28,16 @@ window.DEFAULT_PRODUCTS = [
     hint:
       "Nie luftdicht verschliessen – die Kulturen brauchen Luft. Dunkel und bei Raumtemperatur lagern, nicht im Kühlschrank. Die Flüssigkeit darf sehr sauer werden, das schützt vor Schimmel. Braune Fäden und Hefeschlieren sind normal; pelziger, trockener Schimmel (grün, schwarz, weiss-flauschig) nicht – dann alles entsorgen. Wird das Hotel zu voll, alte Schichten abnehmen und kompostieren oder weitergeben.",
     log: [
-      { date: "2026-10-04", text: "Kein laufender Kombucha mehr. Drei SCOBYs im Hotel, mit Tuch abgedeckt." }
+      { date: "2026-10-04", text: "Kein laufender Kombucha mehr. Drei SCOBYs im Hotel, mit Tuch abgedeckt." },
+      { date: "2026-11-08", text: "Kontrolle: neue Schicht an der Oberfläche gebildet, gesund, kein Schimmel – jetzt 4 SCOBYs. Hotel aufgelöst: alle SCOBYs und die ganzen 5 dl Flüssigkeit in den Mate-Kombucha (VARDAGEN 4 l) gegeben." }
     ],
     steps: [
       { from: 0, to: 0, title: "Hotel anlegen", text: "Drei SCOBYs ins Glas, mit saurem Kombucha vollständig bedecken, Tuch + Gummiband drauf." },
       { from: 1, to: 27, title: "Ruhen lassen · wöchentlich Sichtkontrolle", text: "Nichts zu tun. Einmal pro Woche prüfen: Flüssigkeitsstand, Geruch (essigsauer = gut), keine Schimmelstellen." },
-      { from: 28, to: 42, label: "alle 4–6 Wochen", title: "Füttern", text: "Etwas Flüssigkeit abgiessen (als Starter aufheben oder als Essig nutzen) und mit frischem, abgekühltem, gesüsstem Tee (ca. 70 g Zucker pro Liter) auffüllen." },
-      { from: 43, to: null, title: "Weiter pflegen oder neuen Kombucha ansetzen", text: "Wöchentliche Sichtkontrolle, alle 4–6 Wochen füttern. Für einen neuen Ansatz: einen SCOBY plus 10 % der Teemenge als Ansatzflüssigkeit entnehmen." }
+      { from: 28, to: 34, label: "alle 4–6 Wochen", title: "Füttern", text: "Etwas Flüssigkeit abgiessen (als Starter aufheben oder als Essig nutzen) und mit frischem, abgekühltem, gesüsstem Tee (ca. 70 g Zucker pro Liter) auffüllen." },
+      { from: 35, to: 35, title: "Aufgelöst für Mate-Kombucha", text: "Alle SCOBYs und die ganzen 5 dl Ansatzflüssigkeit in den Mate-Kombucha (VARDAGEN 4 l) gegeben. Während der Gärung gibt es keine Reserve." },
+      { from: 45, to: 51, label: "sobald Kombucha fertig", title: "Hotel neu aufbauen", text: "2 SCOBYs mit 3–5 dl fertigem Mate-Kombucha zurück ins Glas, Tuch + Gummiband drauf. Den alten, zerknitterten SCOBY kompostieren." },
+      { from: 52, to: null, title: "Weiter pflegen", text: "Wöchentliche Sichtkontrolle, alle 4–6 Wochen mit gesüsstem Tee füttern. Für einen neuen Ansatz: einen SCOBY plus 10 % der Teemenge als Ansatzflüssigkeit entnehmen." }
     ]
   },
   {
@@ -287,6 +290,37 @@ window.DEFAULT_PRODUCTS = [
       { from: 2, to: 20, title: "Kontrollieren & entgasen", text: "Ab Tag 2–3 regelmässig prüfen. Bei starkem Aufblähen eine Ecke öffnen, Gas ablassen und neu verschweissen." },
       { from: 21, to: 28, title: "Reif – Hot Sauce machen", text: "Ab ca. 29.11. (nach 3–4 Wochen): mit Essig pürieren, nach Wunsch Knoblauch und Zucker dazu, durch ein Sieb streichen, abfüllen." },
       { from: 29, to: null, title: "Kühl lagern & geniessen", text: "Abgefüllte Sauce im Kühlschrank aufbewahren." }
+    ]
+  },
+  {
+    id: "mate-kombucha-1",
+    name: "Mate-Kombucha",
+    type: "VARDAGEN 5 l (Zapfhahn) · 4 l Ansatz · Bio-Mate",
+    color: "#b08a3e",
+    start: "2026-11-08",
+    description:
+      "Erster Kombucha mit Mate statt Schwarztee, angesetzt am 08.11.2026 im IKEA-VARDAGEN-Gefäss mit Zapfhahn (5 l, mit 4 l gefüllt). Das SCOBY-Hotel wurde dafür aufgelöst: alle SCOBYs und die ganzen 5 dl Ansatzflüssigkeit kamen in den Ansatz. Mate bei 75–80 °C aufgegossen (nicht kochend, sonst bitter), mit Zucker gesüsst und auf unter 30 °C abgekühlt. Gärung bei 22–26 °C, dunkel, mit Tuch abgedeckt: ca. 10–16 Tage. Danach über den Zapfhahn abfüllen, optional zweite Gärung mit Zitrone/Orange, Ingwer oder Minze. Mit dem fertigen Kombucha wird das SCOBY-Hotel neu aufgebaut.",
+    ingredientsTitle: "Was ist drin",
+    ingredients: [
+      { name: "Wasser (1,4 l heiss für den Aufguss, 2,1 l kalt)", amount: "3.5 l" },
+      { name: "Bio-Mate (Naturaplan)", amount: "32–40 g" },
+      { name: "Zucker (Puderzucker geht, nach Gewicht)", amount: "280 g" },
+      { name: "Ansatzflüssigkeit aus dem SCOBY-Hotel", amount: "5 dl" },
+      { name: "SCOBYs, alle aus dem Hotel", amount: "alle" },
+      { name: "VARDAGEN-Gefäss mit Zapfhahn, mit Tuch + Gummiband abgedeckt", amount: "5 l" }
+    ],
+    hint:
+      "Den Metalldeckel nicht verwenden – mit Tuch und Gummiband abdecken, die Kultur braucht Luft. Dunkel bei 22–26 °C stehen lassen und nicht verschieben. Ab Tag 7 über den Zapfhahn probieren. Hefefäden können den Hahn verstopfen: bei jedem Neuansatz durchspülen. Pelziger, trockener Schimmel (grün, schwarz, blau, weiss-flauschig): alles entsorgen. Keine Reserve im Hotel, solange der Ansatz läuft.",
+    log: [
+      { date: "2026-11-08", text: "Angesetzt im VARDAGEN (4 l): Mate bei 75–80 °C aufgegossen, 280 g Zucker, 5 dl Ansatzflüssigkeit und alle SCOBYs aus dem Hotel." }
+    ],
+    steps: [
+      { from: 0, to: 0, title: "Ansetzen", text: "1,4 l Wasser auf 75–80 °C, Mate 8–10 Min. ziehen lassen, absieben, 280 g Zucker auflösen, 2,1 l kaltes Wasser dazu (unter 30 °C). Ins VARDAGEN, 5 dl Ansatzflüssigkeit und alle SCOBYs dazu, mit Tuch abdecken." },
+      { from: 1, to: 6, title: "Ruhen lassen", text: "Dunkel bei 22–26 °C, nicht bewegen. Neue Haut an der Oberfläche und Bläschen sind gute Zeichen." },
+      { from: 7, to: 16, title: "Über den Zapfhahn probieren", text: "Alle 1–2 Tage ein Schlückchen kosten. Fertig, wenn Süsse und Säure ausgewogen sind (meist 10–16 Tage)." },
+      { from: 10, to: 16, label: "sobald fertig", title: "Abfüllen & Hotel neu aufbauen", text: "Über den Zapfhahn in Bügelflaschen abfüllen. 2 SCOBYs mit 3–5 dl fertigem Kombucha zurück ins Hotel. Für den nächsten Ansatz einen SCOBY + 10 % Starter im VARDAGEN lassen." },
+      { from: 17, to: 19, label: "+2–3 Tage", title: "Zweite Gärung (optional)", text: "Mit Zitrone/Orange, Ingwer oder Minze in Bügelflaschen 2–3 Tage bei Raumtemperatur, täglich kurz entlüften, dann in den Kühlschrank." },
+      { from: 20, to: null, title: "Geniessen & weiterbrauen", text: "Kühl lagern. Dauerbetrieb möglich: jeweils 1–1,5 l abzapfen und mit frischem, abgekühltem, gesüsstem Mate-Tee nachfüllen." }
     ]
   }
 ];
