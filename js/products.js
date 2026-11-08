@@ -114,6 +114,9 @@ window.DEFAULT_PRODUCTS = [
     ],
     hint:
       "Bügelverschluss täglich kurz öffnen (Entlüften), besonders in den ersten 1–2 Wochen – sonst baut sich CO₂-Druck auf. Glas dabei kurz kippen, damit alle Zehen mit Honig benetzt bleiben. Kühl und dunkel lagern, nicht im Kühlschrank (Honig kristallisiert, Fermentation wird zu stark gebremst). Zeichen, dass es läuft: Bläschen, leichtes Blubbern beim Öffnen, dünnflüssigerer und dunklerer Honig.",
+    log: [
+      { date: "2026-11-08", text: "Kontrolle nach 8 Wochen: Honig dunkel und ganz flüssig, Zehen hell bis goldbraun und prall, kein Schimmel, keine Bläschen mehr. Zehen schwimmen oben auf – Glas alle paar Tage kippen, 1–2× pro Woche entlüften." }
+    ],
     steps: [
       { from: 0, to: 0, title: "Ansetzen", text: "Geschälte Zehen ins Glas, mit rohem Honig vollständig bedecken, Bügelverschluss schliessen." },
       { from: 1, to: 6, title: "Erste Tage: täglich entlüften", text: "Bügelverschluss kurz öffnen, Glas kippen. Honig wird flüssiger – das ist normal." },
