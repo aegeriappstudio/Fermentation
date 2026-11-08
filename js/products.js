@@ -361,5 +361,33 @@ window.DEFAULT_PRODUCTS = [
       { from: 17, to: 19, label: "+2–3 Tage", title: "Zweite Gärung (optional)", text: "Mit Zitrone/Orange, Ingwer oder Minze in Bügelflaschen 2–3 Tage bei Raumtemperatur, täglich kurz entlüften, dann in den Kühlschrank." },
       { from: 20, to: null, title: "Geniessen & weiterbrauen", text: "Kühl lagern. Dauerbetrieb möglich: jeweils 1–1,5 l abzapfen und mit frischem, abgekühltem, gesüsstem Mate-Tee nachfüllen." }
     ]
+  },
+  {
+    id: "cayenne-vakuum-2025",
+    name: "Cayenne-Chilis (Vakuumbeutel 2025)",
+    type: "Vakuumbeutel · Cayenne long · seit ca. 1 Jahr",
+    color: "#8e2a1c",
+    start: "2025-10-05",
+    description:
+      "Lange, rote Cayenne-Chilis (Cayenne long), angesetzt am Sonntag, 05.10.2025: in ca. 3–4 cm lange Stücke geschnitten, vermutlich mit Knoblauch, gesalzen und im Vakuumbeutel vakuumiert. Nach gut einem Jahr hat sich das Vakuum durch das Gärgas aufgelöst, die Chilis sind zu einer dunkelrot-braunen Maische zerfallen, darüber steht klare, gelb-orange Flüssigkeit. Sehr lange gereift: ideal als Basis für eine tiefe, komplexe Hot Sauce.",
+    ingredientsTitle: "Was ist drin",
+    ingredients: [
+      { name: "Cayenne-Chilis (Cayenne long), in Stücken", amount: "" },
+      { name: "Knoblauch (vermutlich)", amount: "" },
+      { name: "Salz", amount: "" },
+      { name: "Vakuumbeutel", amount: "1 Stück" }
+    ],
+    hint:
+      "Der Beutel steht unter Gas: über dem Spülbecken öffnen und Handschuhe tragen. Riechprobe: säuerlich-fruchtig = gut; faulig, käsig oder nach Lösungsmittel = entsorgen. Schimmel (pelzig, grün/schwarz/weiss-flauschig): entsorgen. Für Lagerung ausser Kühlschrank: Sauce mit Essig auf pH ≤ 4,0 bringen, aufkochen und heiss abfüllen.",
+    log: [
+      { date: "2025-10-05", text: "Angesetzt: lange Cayenne-Chilis in Stücken, vermutlich mit Knoblauch, gesalzen und vakuumiert." },
+      { date: "2026-11-08", text: "Kontrolle nach gut einem Jahr: Vakuum weg, Beutel mit Gärgas gefüllt. Maische dunkelrot-braun mit Samen unten, klare gelb-orange Flüssigkeit darüber, Schaumreste an der Beutelwand. Kein Schimmel sichtbar." }
+    ],
+    steps: [
+      { from: 0, to: 0, title: "Ansetzen", text: "Cayenne-Chilis in Stücke schneiden, salzen (vermutlich mit Knoblauch) und im Beutel vakuumieren." },
+      { from: 1, to: 398, title: "Lange Fermentation im Beutel", text: "Chilis zerfallen langsam zu einer Maische, Gärgas löst das Vakuum auf." },
+      { from: 399, to: 399, title: "Kontrolle", text: "Vakuum weg, Maische und klare Flüssigkeit getrennt, kein Schimmel sichtbar." },
+      { from: 400, to: null, label: "nach Wunsch, z. B. ab 29.11.", title: "Hot Sauce machen", text: "Beutel über dem Spülbecken öffnen, Riechprobe. Maische mit etwas Flüssigkeit und 20–30 % Essig pürieren, passieren, pH ≤ 4,0 prüfen, aufkochen, heiss abfüllen. Passt zusammen mit den anderen Chili-Fermenten." }
+    ]
   }
 ];
