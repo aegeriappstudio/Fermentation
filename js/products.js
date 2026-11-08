@@ -129,11 +129,11 @@ window.DEFAULT_PRODUCTS = [
   {
     id: "lakto-chili-1",
     name: "Lakto-Chili Glas 1",
-    type: "Glas 1 von 2 · 250 g Chilis",
+    type: "Glas 1 von 3 · 250 g Chilis",
     color: "#c0392b",
     start: "2026-10-04",
     description:
-      "Milchsauer fermentierte Chilis, auf zwei Gläser mit je 250 g aufgeteilt. Glas 1 von zwei. Chilis geben beim Fermentieren Saft ab, die Schärfe wird runder und bekommt eine fruchtige Säure. Nach 1–2 Wochen bei Raumtemperatur ist die erste Gärung durch; danach entweder kühl weiterreifen lassen oder zu Hot Sauce pürieren (mit etwas Lake, optional Essig, Knoblauch).",
+      "Milchsauer fermentierte Chilis, auf drei Gläser aufgeteilt (zwei runde à 250 g, ein eckiges). Glas 1 von drei. Chilis geben beim Fermentieren Saft ab, die Schärfe wird runder und bekommt eine fruchtige Säure. Nach 1–2 Wochen bei Raumtemperatur ist die erste Gärung durch; danach entweder kühl weiterreifen lassen oder zu Hot Sauce pürieren (mit etwas Lake, optional Essig, Knoblauch).",
     ingredientsTitle: "Was ist drin",
     ingredients: [
       { name: "Chilis", amount: "250 g" },
@@ -143,24 +143,27 @@ window.DEFAULT_PRODUCTS = [
     hint:
       "Alles unter der Flüssigkeit halten, Deckel locker oder Glas täglich entlüften. Weissliche Kahmhefe ist harmlos: abheben. Schimmel (pelzig, grün/schwarz): entsorgen. Beim Hantieren Handschuhe – die Lake ist scharf.",
     log: [
-      { date: "2026-10-04", text: "Chilis auf zwei Gläser à 250 g aufgeteilt." }
+      { date: "2026-10-04", text: "Chilis auf drei Gläser aufgeteilt (zwei runde à 250 g, ein eckiges)." },
+      { date: "2026-11-08", text: "Kontrolle nach 5 Wochen: Chilis unter der Lake (Gärgewicht), Lake klar orange-rot, Samen am Boden, kein Schimmel, keine Kahmhefe. Gummiring orange verfärbt (harmlos). Bleibt vorerst draussen, wöchentlich kontrollieren, Verarbeitung ab ca. 29.11." }
     ],
     steps: [
-      { from: 0, to: 0, title: "Aufteilen", text: "Chilis auf zwei Gläser verteilen (je 250 g), mit Lake bedecken, beschweren, locker verschliessen." },
+      { from: 0, to: 0, title: "Aufteilen", text: "Chilis auf drei Gläser verteilen (zwei runde à 250 g, ein eckiges), mit Lake bedecken, beschweren, locker verschliessen." },
       { from: 1, to: 6, title: "Täglich entlüften & kontrollieren", text: "Gas ablassen, Chilis unter der Lake halten. Bläschen und trübe Lake sind gute Zeichen." },
       { from: 7, to: 14, title: "Probieren", text: "Alle 2–3 Tage eine Chili kosten: sauer-scharf, fruchtig, Lake angenehm säuerlich." },
       { from: 7, to: 14, label: "sobald fertig", title: "Kühl stellen oder Hot Sauce machen", text: "Deckel fest zu → Kühlschrank. Oder pürieren: Chilis mit etwas Lake (und optional Essig, Knoblauch) mixen, passieren, in Flaschen abfüllen." },
-      { from: 15, to: null, title: "Lagern & verwenden", text: "Im Kühlschrank mehrere Monate haltbar; Geschmack wird mit der Zeit runder." }
+      { from: 15, to: 34, title: "Weiter fermentieren", text: "Bei Raumtemperatur weiter reifen lassen: Säure und Aroma werden kräftiger." },
+      { from: 35, to: 55, title: "Draussen lassen · wöchentlich kontrollieren", text: "Einmal pro Woche: Bügel kurz öffnen (entlüften), Chilis unter der Lake? Riecht säuerlich-fruchtig? Kein Schimmel? Salzkrusten am Glas abwischen." },
+      { from: 56, to: null, label: "ab ca. 29.11.", title: "Hot Sauce machen oder Kühlschrank", text: "Spätestens jetzt verarbeiten, z. B. zusammen mit den schwarzen Chilis: abtropfen, mit etwas Lake und 20–30 % Essig pürieren, passieren, pH ≤ 4,0 prüfen, aufkochen, heiss abfüllen. Oder Deckel fest zu → Kühlschrank, dort mehrere Monate haltbar." }
     ]
   },
   {
     id: "lakto-chili-2",
     name: "Lakto-Chili Glas 2",
-    type: "Glas 2 von 2 · 250 g Chilis",
+    type: "Glas 2 von 3 · 250 g Chilis",
     color: "#d9481f",
     start: "2026-10-04",
     description:
-      "Milchsauer fermentierte Chilis, auf zwei Gläser mit je 250 g aufgeteilt. Glas 2 von zwei. Chilis geben beim Fermentieren Saft ab, die Schärfe wird runder und bekommt eine fruchtige Säure. Nach 1–2 Wochen bei Raumtemperatur ist die erste Gärung durch; danach entweder kühl weiterreifen lassen oder zu Hot Sauce pürieren (mit etwas Lake, optional Essig, Knoblauch).",
+      "Milchsauer fermentierte Chilis, auf drei Gläser aufgeteilt (zwei runde à 250 g, ein eckiges). Glas 2 von drei. Chilis geben beim Fermentieren Saft ab, die Schärfe wird runder und bekommt eine fruchtige Säure. Nach 1–2 Wochen bei Raumtemperatur ist die erste Gärung durch; danach entweder kühl weiterreifen lassen oder zu Hot Sauce pürieren (mit etwas Lake, optional Essig, Knoblauch).",
     ingredientsTitle: "Was ist drin",
     ingredients: [
       { name: "Chilis", amount: "250 g" },
@@ -170,14 +173,47 @@ window.DEFAULT_PRODUCTS = [
     hint:
       "Alles unter der Flüssigkeit halten, Deckel locker oder Glas täglich entlüften. Weissliche Kahmhefe ist harmlos: abheben. Schimmel (pelzig, grün/schwarz): entsorgen. Beim Hantieren Handschuhe – die Lake ist scharf.",
     log: [
-      { date: "2026-10-04", text: "Chilis auf zwei Gläser à 250 g aufgeteilt." }
+      { date: "2026-10-04", text: "Chilis auf drei Gläser aufgeteilt (zwei runde à 250 g, ein eckiges)." },
+      { date: "2026-11-08", text: "Kontrolle nach 5 Wochen: Chilis unter der Lake (Gärgewicht), Lake klar orange-rot, Samen am Boden, kein Schimmel, keine Kahmhefe. Gummiring orange verfärbt (harmlos). Bleibt vorerst draussen, wöchentlich kontrollieren, Verarbeitung ab ca. 29.11." }
     ],
     steps: [
-      { from: 0, to: 0, title: "Aufteilen", text: "Chilis auf zwei Gläser verteilen (je 250 g), mit Lake bedecken, beschweren, locker verschliessen." },
+      { from: 0, to: 0, title: "Aufteilen", text: "Chilis auf drei Gläser verteilen (zwei runde à 250 g, ein eckiges), mit Lake bedecken, beschweren, locker verschliessen." },
       { from: 1, to: 6, title: "Täglich entlüften & kontrollieren", text: "Gas ablassen, Chilis unter der Lake halten. Bläschen und trübe Lake sind gute Zeichen." },
       { from: 7, to: 14, title: "Probieren", text: "Alle 2–3 Tage eine Chili kosten: sauer-scharf, fruchtig, Lake angenehm säuerlich." },
       { from: 7, to: 14, label: "sobald fertig", title: "Kühl stellen oder Hot Sauce machen", text: "Deckel fest zu → Kühlschrank. Oder pürieren: Chilis mit etwas Lake (und optional Essig, Knoblauch) mixen, passieren, in Flaschen abfüllen." },
-      { from: 15, to: null, title: "Lagern & verwenden", text: "Im Kühlschrank mehrere Monate haltbar; Geschmack wird mit der Zeit runder." }
+      { from: 15, to: 34, title: "Weiter fermentieren", text: "Bei Raumtemperatur weiter reifen lassen: Säure und Aroma werden kräftiger." },
+      { from: 35, to: 55, title: "Draussen lassen · wöchentlich kontrollieren", text: "Einmal pro Woche: Bügel kurz öffnen (entlüften), Chilis unter der Lake? Riecht säuerlich-fruchtig? Kein Schimmel? Salzkrusten am Glas abwischen." },
+      { from: 56, to: null, label: "ab ca. 29.11.", title: "Hot Sauce machen oder Kühlschrank", text: "Spätestens jetzt verarbeiten, z. B. zusammen mit den schwarzen Chilis: abtropfen, mit etwas Lake und 20–30 % Essig pürieren, passieren, pH ≤ 4,0 prüfen, aufkochen, heiss abfüllen. Oder Deckel fest zu → Kühlschrank, dort mehrere Monate haltbar." }
+    ]
+  },
+  {
+    id: "lakto-chili-3",
+    name: "Lakto-Chili Glas 3 (eckig)",
+    type: "Glas 3 von 3 · eckiges Bügelglas · ohne Gärgewicht",
+    color: "#b8321e",
+    start: "2026-10-04",
+    description:
+      "Milchsauer fermentierte Chilis, auf drei Gläser aufgeteilt (zwei runde à 250 g, ein eckiges). Glas 3 von drei, das eckige Bügelglas. Chilis geben beim Fermentieren Saft ab, die Schärfe wird runder und bekommt eine fruchtige Säure. Nach 1–2 Wochen bei Raumtemperatur ist die erste Gärung durch; danach entweder kühl weiterreifen lassen oder zu Hot Sauce pürieren (mit etwas Lake, optional Essig, Knoblauch).",
+    ingredientsTitle: "Was ist drin",
+    ingredients: [
+      { name: "Chilis", amount: "" },
+      { name: "Salz (unjodiert)", amount: "" },
+      { name: "Eckiges Bügelglas, ohne Gärgewicht", amount: "1 Stück" }
+    ],
+    hint:
+      "Kein Gärgewicht: mit einem wassergefüllten Zip-Beutel oder kleinen Glas beschweren und Lakestand im Auge behalten; sinkt er, mit 2 %-Salzlake auffüllen. Alles unter der Flüssigkeit halten, Deckel locker oder Glas täglich entlüften. Weissliche Kahmhefe ist harmlos: abheben. Schimmel (pelzig, grün/schwarz): entsorgen. Beim Hantieren Handschuhe – die Lake ist scharf.",
+    log: [
+      { date: "2026-10-04", text: "Chilis auf drei Gläser aufgeteilt (zwei runde à 250 g, ein eckiges)." },
+      { date: "2026-11-08", text: "Kontrolle nach 5 Wochen: Chilis noch bedeckt, aber Lake tiefer als in den runden Gläsern und kein Gärgewicht. Weissliche Salzkruste am Glas über der Lake (abwischen). Kein Schimmel, keine Kahmhefe. Bleibt vorerst draussen, wöchentlich kontrollieren, Verarbeitung ab ca. 29.11." }
+    ],
+    steps: [
+      { from: 0, to: 0, title: "Aufteilen", text: "Chilis auf drei Gläser verteilen (zwei runde à 250 g, ein eckiges), mit Lake bedecken, beschweren, locker verschliessen." },
+      { from: 1, to: 6, title: "Täglich entlüften & kontrollieren", text: "Gas ablassen, Chilis unter der Lake halten. Bläschen und trübe Lake sind gute Zeichen." },
+      { from: 7, to: 14, title: "Probieren", text: "Alle 2–3 Tage eine Chili kosten: sauer-scharf, fruchtig, Lake angenehm säuerlich." },
+      { from: 7, to: 14, label: "sobald fertig", title: "Kühl stellen oder Hot Sauce machen", text: "Deckel fest zu → Kühlschrank. Oder pürieren: Chilis mit etwas Lake (und optional Essig, Knoblauch) mixen, passieren, in Flaschen abfüllen." },
+      { from: 15, to: 34, title: "Weiter fermentieren", text: "Bei Raumtemperatur weiter reifen lassen: Säure und Aroma werden kräftiger." },
+      { from: 35, to: 55, title: "Draussen lassen · wöchentlich kontrollieren", text: "Einmal pro Woche: Bügel kurz öffnen (entlüften), Chilis unter der Lake? Riecht säuerlich-fruchtig? Kein Schimmel? Salzkrusten am Glas abwischen." },
+      { from: 56, to: null, label: "ab ca. 29.11.", title: "Hot Sauce machen oder Kühlschrank", text: "Spätestens jetzt verarbeiten, z. B. zusammen mit den schwarzen Chilis: abtropfen, mit etwas Lake und 20–30 % Essig pürieren, passieren, pH ≤ 4,0 prüfen, aufkochen, heiss abfüllen. Oder Deckel fest zu → Kühlschrank, dort mehrere Monate haltbar." }
     ]
   },
   {
